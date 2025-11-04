@@ -1,0 +1,20 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg155" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <linearGradient id="body155" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg155)"/>
+  <g transform="translate(40,150)">
+    <rect x="160" y="70" width="560" height="160" rx="32" fill="url(#body155)"/>
+    <rect x="740" y="50" width="40" height="200" rx="12" fill="#1e40af" opacity="0.5"/>
+    <rect x="0" y="94" width="80" height="112" rx="12" fill="#1e40af" opacity="0.35"/>
+  </g>
+  <text x="400" y="430" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600" fill="#0f172a">155MM Cartridge Case</text>
+</svg>
+
