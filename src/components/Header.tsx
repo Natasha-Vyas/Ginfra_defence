@@ -15,16 +15,10 @@ const Header = () => {
   ];
 
   const servicesDropdown = [
-    { name: 'Cartridge Cases', href: '/services/cartridge-cases' },
-    {
-      name: 'Combustible Cartridge Cases',
-      href: '/services/combustible-cartridge-cases',
-    },
-    {
-      name: 'Modular Charge Systems',
-      href: '/services/modular-charge-systems',
-    },
-    { name: 'Mechanical Fuzes', href: '/services/mechanical-fuzes' },
+    { name: 'Precision CNC Machining', href: '/services/cartridge-cases' },
+    { name: 'Forging & Heat Treatment', href: '/services/combustible-cartridge-cases' },
+    { name: 'Quality & Compliance', href: '/services/modular-charge-systems' },
+    { name: 'Electronics Integration & Assembly', href: '/services/mechanical-fuzes' },
     { name: 'All Services', href: '/services' },
   ];
 
@@ -43,7 +37,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-secondary-900">
-                GInfra Travancore
+                Ginfra Dynamic
               </h1>
             </div>
           </Link>

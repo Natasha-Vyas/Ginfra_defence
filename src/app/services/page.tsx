@@ -3,130 +3,83 @@ import Link from 'next/link';
 export default function Services() {
   const products = [
     {
-      category: 'Cartridge Cases',
+      category: 'Precision CNC Machining',
       items: [
         {
-          name: '23MM Cartridge Case',
+          name: '5‑Axis Milling',
           description:
-            'High-performance cartridge case for 23mm applications with anti-flying aircraft and armoured aerial vehicles capabilities',
+            'Complex geometries, pocketing, and contouring with in‑process probing and CAM verification.',
           specifications: [
-            'Anti-flying aircraft',
-            'Armoured aerial vehicles',
-            'Light armoured vehicles',
-            'Enemy protection',
+            '4/5‑axis machining cells',
+            '±0.005 mm tolerance',
+            'Toolpath simulation',
+            'In‑process measurement',
           ],
-          image: '/images/services/cartridge-cases/23mm.svg',
+          image: '/images/services/cnc/5-axis.svg',
         },
         {
-          name: '30MM Cartridge Case',
+          name: 'CNC Turning',
           description:
-            '30mm cartridge case with anti-armour capabilities and advanced ballistic performance',
-          specifications: [
-            'Anti-armour',
-            'All defences',
-            'Naval point defence',
-            'Suspension of light armoured vehicles',
-          ],
-          image: '/images/services/cartridge-cases/30mm.svg',
-        },
-        {
-          name: '40MM Cartridge Case',
-          description:
-            '40mm cartridge case supporting high-velocity armor-piercing and programmable airburst munitions',
-          specifications: [
-            'HVG suppression',
-            'Anti-vehicle engagement',
-            'Close range naval defence',
-            'Airburst capability',
-          ],
-          image: '/images/services/cartridge-cases/40mm.svg',
-        },
-        {
-          name: '105MM Cartridge Case',
-          description:
-            '105mm cartridge case for medium-range artillery applications with armor penetration capabilities',
-          specifications: [
-            'Armor penetration',
-            'Long-range support',
-            'Tank main gun',
-            'Artillery support',
-          ],
-          image: '/images/services/cartridge-cases/105mm.svg',
-        },
-        {
-          name: '155MM Cartridge Case',
-          description:
-            '155mm cartridge case for long-range artillery systems with high explosive capabilities',
-          specifications: [
-            'Long-range artillery',
-            'High explosive',
-            'Precision targeting',
-            'Extended range',
-          ],
-          image: '/images/services/cartridge-cases/155mm.svg',
+            'High-precision turning for shafts, rings, and cylindrical components, including live tooling.',
+          specifications: ['Concentricity control', 'Threading & grooving', 'SPC monitoring', 'Batch reports'],
+          image: '/images/services/cnc/turning.svg',
         },
       ],
     },
     {
-      category: 'Combustible Cartridge Cases',
+      category: 'Forging & Heat Treatment',
       items: [
         {
-          name: '120MM & 125MM FSAPDS',
+          name: 'Closed‑Die Forging',
           description:
-            'Fin-Stabilized Armor-Piercing Discarding Sabot rounds for main battle tanks',
-          specifications: [
-            'FSAPDS technology',
-            'Main battle tank',
-            'Armor penetration',
-            'High velocity',
-          ],
-          image: '/images/services/combustible/fsapds.svg',
+            'Hydraulic presses with induction heating for high‑strength blanks and structural parts.',
+          specifications: ['Press capacity', 'Trim & flash removal', 'Temperature control', 'Metallurgy checks'],
+          image: '/images/services/forging/hot-forging.svg',
         },
         {
-          name: '120MM HESH',
+          name: 'Quench & Temper',
           description:
-            'High Explosive Squash Head rounds for anti-fortification and anti-armor applications',
-          specifications: [
-            'Anti-fortification',
-            'Squash head technology',
-            'Versatile engagement',
-            'High explosive',
-          ],
-          image: '/images/services/combustible/hesh.svg',
+            'Batch furnaces, quench tanks, and tempering ovens for targeted mechanical properties.',
+          specifications: ['Quench media per spec', 'Hardness validation', 'Microstructure review', 'Traceability'],
+          image: '/images/services/forging/heat-treatment.svg',
         },
       ],
     },
     {
-      category: 'Modular Charge Systems',
+      category: 'Electronics Integration & Assembly',
       items: [
         {
-          name: 'BMCS - 155MM M91 & M92',
+          name: 'SMT/THT Assembly',
           description:
-            'Bi-Modular Charge System for 155mm artillery with scalable range control and superior ballistic performance',
-          specifications: [
-            'Scalable range control',
-            'Superior ballistic performance',
-            'Modular design',
-            'Artillery systems',
-          ],
-          image: '/images/services/modular/bmcs.svg',
+            'Automated placement and selective soldering with AOI and IPC‑aligned processes.',
+          specifications: ['ESD‑safe lines', 'AOI/ICT/functional', 'Conformal coating', 'Lot traceability'],
+          image: '/images/services/electronics/smt.svg',
+        },
+        {
+          name: 'Sensor Integration & Potting',
+          description:
+            'Harness build, sensor integration, potting/encapsulation, and sealing for harsh environments.',
+          specifications: ['Harnessing', 'Encapsulation', 'Sealing', 'Documentation'],
+          image: '/images/services/electronics/potting.svg',
         },
       ],
     },
     {
-      category: 'Mechanical Fuzes',
+      category: 'Quality & Compliance',
       items: [
         {
-          name: '23MM, 30MM, 40MM & Internal Components',
+          name: 'Dimensional Validation',
           description:
-            'Precision mechanical fuzes for various calibres with advanced safety and arming mechanisms',
-          specifications: [
-            'Point Detonating (PD) Fuze',
-            'Time Proximity/Timed Fuze',
-            'Proximity/Timed Fuze',
-            'Safety & Arming Device',
-          ],
-          image: '/images/services/fuzes/pd.svg',
+            'CMM, optical inspection, and CTQ coverage for first article and production lots.',
+          specifications: ['FAI/PPAP', 'CTQs', 'Gauge R&R', 'Lot reports'],
+          image: '/images/services/qa/dimensional.svg',
+        },
+        {
+          name: 'Environmental Testing',
+          description:
+            'Thermal, humidity, vibration, and shock testing aligned to defence standards.',
+          specifications: ['Thermal cycling', 'Humidity soak', 'Vibration & shock', 'Acceptance test plans'],
+          image: '/images/services/qa/environmental.svg',
         },
       ],
     },
@@ -247,15 +200,15 @@ export default function Services() {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium mb-6 border border-white/20">
               <span className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
-              Advanced Defence Solutions
+              Ginfra Dynamic — Defence Manufacturing
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-blue-100 to-indigo-200 bg-clip-text text-transparent leading-tight">
-              Our Products & Services
+              Defence Manufacturing Portfolio
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed max-w-4xl mx-auto">
-              Comprehensive range of precision-manufactured defence components
-              and subsystems, from cartridge cases to advanced fuze systems,
-              designed for mission-critical applications.
+              Ginfra Dynamic designs and manufactures defence-grade components and
+              sub-systems—from cartridge cases and mechanical fuzes to modular
+              charge systems—validated for mission-critical applications.
             </p>
           </div>
         </div>
@@ -270,11 +223,11 @@ export default function Services() {
                 <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-4">
                   Category {categoryIndex + 1}
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-                  {category.category}
-                </h2>
-                <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
-              </div>
+                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+                   {category.category}
+                 </h2>
+                 <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full"></div>
+               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((product, productIndex) => (

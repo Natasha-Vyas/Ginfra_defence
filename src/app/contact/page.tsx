@@ -12,6 +12,9 @@ export default function Contact() {
     message: '',
     inquiryType: 'general',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -24,13 +27,48 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert(
-      'Thank you for your inquiry. We will get back to you within 24 hours.'
-    );
+    setIsSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('https://submit-form.com/azLGGlBBx', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          inquiryType: formData.inquiryType,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        subject: '',
+        message: '',
+        inquiryType: 'general',
+      });
+    } catch (err) {
+      setError('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -197,7 +235,20 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-secondary-900 mb-6">
                   Send us a Message
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">
+                    {error}
+                  </div>
+                )}
+                {isSubmitted ? (
+                  <div className="rounded-lg border border-green-200 bg-green-50 p-6">
+                    <h3 className="text-lg font-semibold text-green-800 mb-2">Thank you!</h3>
+                    <p className="text-green-700">
+                      Your message has been sent. We’ll get back to you within 24 hours.
+                    </p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label
@@ -337,11 +388,13 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full btn-primary text-center"
+                    disabled={isSubmitting}
+                    className="w-full btn-primary text-center disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
+                )}
               </div>
             </div>
 

@@ -1,100 +1,100 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function CartridgeCases() {
   const cartridgeCases = [
     {
-      name: '23MM Cartridge Case',
+      name: '5-Axis Milling',
       description:
-        'High-performance cartridge case for 23mm applications with anti-flying aircraft and armoured aerial vehicles capabilities',
+        'Complex geometries, pocketing, and contouring with multi-axis CAM and in-process probing.',
       specifications: [
-        'Anti-flying aircraft engagement',
-        'Armoured aerial vehicles targeting',
-        'Light armoured vehicles defense',
-        'Enemy protection systems',
+        '4/5â€‘axis machining cells',
+        'Â±0.005 mm tolerance',
+        'Toolpath simulation & verification',
+        'Inâ€‘process measurement',
       ],
       technicalSpecs: {
-        caliber: '23mm',
-        material: 'High-grade steel alloy',
-        finish: 'Corrosion-resistant coating',
-        applications: 'Air defense systems',
+        caliber: 'N/A',
+        material: 'Aluminium, steels, titanium, nickel alloys',
+        finish: 'Ra â‰¤ 0.8 Î¼m achievable',
+        applications: 'Housings, carriers, precision fixtures',
       },
     },
     {
-      name: '30MM Cartridge Case',
+      name: 'CNC Turning',
       description:
-        '30mm cartridge case with anti-armour capabilities and advanced ballistic performance for versatile engagement scenarios',
+        'High-precision turning for shafts, rings, and cylindrical components, including live tooling.',
       specifications: [
-        'Anti-armour penetration',
-        'All defense systems compatibility',
-        'Naval point defense applications',
-        'Light armoured vehicle suspension',
+        'Multiâ€‘turret lathes',
+        'Concentricity controls',
+        'Threading & grooving',
+        'Batch SPC monitoring',
       ],
       technicalSpecs: {
-        caliber: '30mm',
-        material: 'Precision-forged steel',
-        finish: 'Military-grade coating',
-        applications: 'Multi-role combat systems',
+        caliber: 'N/A',
+        material: 'All ferrous/nonâ€‘ferrous',
+        finish: 'Controlled surface roughness',
+        applications: 'Bushings, adaptors, collars',
       },
     },
     {
-      name: '40MM Cartridge Case',
+      name: 'Complex Bores & Threads',
       description:
-        '40mm cartridge case supporting high-velocity armor-piercing and programmable airburst munitions for enhanced battlefield effectiveness',
+        'Precision bores, threads, and features for critical assemblies and safety interfaces.',
       specifications: [
-        'HVG suppression capabilities',
-        'Anti-vehicle engagement',
-        'Close range naval defense',
-        'Programmable airburst capability',
+        'GD&T conformance',
+        'Custom thread forms',
+        'Bore alignment checks',
+        'CMM validation',
       ],
       technicalSpecs: {
-        caliber: '40mm',
-        material: 'Advanced alloy composition',
-        finish: 'Enhanced durability coating',
-        applications: 'Grenade launcher systems',
+        caliber: 'N/A',
+        material: 'Hardened steels & alloys',
+        finish: 'Honing options available',
+        applications: 'Safety & arming interfaces',
       },
     },
     {
-      name: '105MM Cartridge Case',
+      name: 'Tight Tolerance Finishing',
       description:
-        '105mm cartridge case for medium-range artillery applications with superior armor penetration capabilities and extended range performance',
+        'Final finishing operations ensuring dimensional accuracy and repeatability with full traceability.',
       specifications: [
-        'Superior armor penetration',
-        'Long-range artillery support',
-        'Tank main gun compatibility',
-        'Artillery fire support systems',
+        'Fine boring & reaming',
+        'Flatness & parallelism control',
+        'Lot-wise serialization',
+        '100% inspection on CTQs',
       ],
       technicalSpecs: {
-        caliber: '105mm',
-        material: 'Heavy-duty steel construction',
-        finish: 'Weather-resistant treatment',
-        applications: 'Medium artillery systems',
+        caliber: 'N/A',
+        material: 'As per drawing',
+        finish: 'Surface finishing per spec',
+        applications: 'Assemblies, jigs, fixtures',
       },
     },
     {
-      name: '155MM Cartridge Case',
+      name: 'Prototyping & Small Batch',
       description:
-        '155mm cartridge case for long-range artillery systems with high explosive capabilities and precision targeting for maximum battlefield impact',
+        'Rapid prototypes and pilot lots for qualification and trials with full reporting.',
       specifications: [
-        'Long-range artillery precision',
-        'High explosive payload capacity',
-        'Advanced targeting systems',
-        'Extended range capabilities',
+        '100â€“500 unit pilot runs',
+        'FAI & PPAP documentation',
+        'Dimensional reports',
+        'Change control & DMR',
       ],
       technicalSpecs: {
-        caliber: '155mm',
-        material: 'Premium steel alloy',
-        finish: 'Military specification coating',
-        applications: 'Heavy artillery systems',
+        caliber: 'N/A',
+        material: 'According to program needs',
+        finish: 'Per specification',
+        applications: 'Qualification & validation',
       },
     },
   ];
 
-  const cartridgeImageMap: Record<string, string> = {
-    '23MM Cartridge Case': '/images/services/cartridge-cases/23mm.svg',
-    '30MM Cartridge Case': '/images/services/cartridge-cases/30mm.svg',
-    '40MM Cartridge Case': '/images/services/cartridge-cases/40mm.svg',
-    '105MM Cartridge Case': '/images/services/cartridge-cases/105mm.svg',
-    '155MM Cartridge Case': '/images/services/cartridge-cases/155mm.svg',
+    const cartridgeImageMap: Record<string, string> = {
+    '5-Axis Milling': '/images/services/cnc/5-axis.svg',
+    'CNC Turning': '/images/services/cnc/turning.svg',
+    'Complex Bores & Threads': '/images/services/cnc/bores-threads.svg',
+    'Tight Tolerance Finishing': '/images/services/cnc/finishing.svg',
+    'Prototyping & Small Batch': '/images/services/cnc/prototyping.svg',
   };
 
   return (
@@ -125,15 +125,14 @@ export default function CartridgeCases() {
                 Services
               </Link>
               <span className="mx-2">/</span>
-              <span className="text-white">Cartridge Cases</span>
+              <span className="text-white">Precision CNC Machining</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Cartridge Cases
+              Precision CNC Machining
             </h1>
             <p className="text-xl text-secondary-200 max-w-2xl">
-              Precision-manufactured cartridge cases for various calibers,
-              designed for superior performance in defense applications with
-              uncompromising quality and reliability.
+              Multi-axis milling and turning for mission-critical components with
+              tight tolerances, consistent quality, and full lot traceability.
             </p>
           </div>
         </div>
@@ -146,13 +145,12 @@ export default function CartridgeCases() {
             {/* Left Content */}
             <div>
               <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Advanced Cartridge Case Manufacturing
+                CNC Machining Capabilities
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                Our cartridge cases are manufactured using state-of-the-art
-                precision forging and machining processes, ensuring consistent
-                quality and performance across all calibers. Each case undergoes
-                rigorous testing to meet the highest defense standards.
+                Our machining cells combine multi-axis CNC platforms with
+                metrology, process control, and documentation, ensuring repeatable
+                execution on complex geometries and critical-to-quality features.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">

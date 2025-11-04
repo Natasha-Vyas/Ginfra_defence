@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -24,17 +24,14 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold">
-                  GInfra Travancore Pvt. Ltd.
+                  Ginfra Dynamic Pvt. Ltd.
                 </h3>
-                <p className="text-secondary-300 text-sm">
-                  Precision Manufacturing
-                </p>
+                <p className="text-secondary-300 text-sm">Defence Manufacturing</p>
               </div>
             </div>
             <p className="text-secondary-300 mb-4 max-w-md">
-              Leading manufacturer of high-precision components and
-              weapon-system subsystems for Defence, Aerospace, and Advanced
-              Robotics applications.
+              Defence-first manufacturer of precision components and munitions
+              sub-systems for land, air, and naval programs.
             </p>
             {/* <div className="flex space-x-4">
               <a
@@ -167,7 +164,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-blue-100 text-sm">
-            © {new Date().getFullYear()} GInfra Travancore Pvt. Ltd. All rights
+            &copy; {new Date().getFullYear()} Ginfra Dynamic Pvt. Ltd. All rights
             reserved.
           </p>
         </div>

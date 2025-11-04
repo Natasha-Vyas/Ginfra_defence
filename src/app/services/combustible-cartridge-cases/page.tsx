@@ -1,97 +1,77 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function CombustibleCartridgeCases() {
   const products = [
     {
-      name: '120MM FSAPDS',
-      fullName: '120MM Fin-Stabilized Armor-Piercing Discarding Sabot',
+      name: 'Hot Forging',
+      fullName: 'Closedâ€‘die forging for structural parts',
       description:
-        'Advanced fin-stabilized armor-piercing discarding sabot rounds designed for main battle tanks with superior penetration capabilities and high-velocity performance.',
+        'Closedâ€‘die forging with controlled heating and press capacity for highâ€‘strength preforms and housings.',
       specifications: [
-        'Fin-stabilized flight trajectory',
-        'Armor-piercing discarding sabot technology',
-        'Main battle tank compatibility',
-        'High-velocity penetration capability',
+        'Hydraulic presses (capacity per program)',
+        'Induction heating & temperature control',
+        'Trimming presses & flash removal',
+        'Metallurgical validation',
       ],
       technicalSpecs: {
-        caliber: '120mm',
-        type: 'FSAPDS',
-        material: 'Tungsten core with sabot',
-        velocity: '1,650+ m/s',
-        applications: 'Main Battle Tanks',
+        caliber: 'N/A',
+        type: 'Forging',
+        material: 'Steels, aluminium, titanium',
+        velocity: 'N/A',
+        applications: 'Casings, carriers, rings',
       },
     },
     {
-      name: '125MM FSAPDS',
-      fullName: '125MM Fin-Stabilized Armor-Piercing Discarding Sabot',
+      name: 'Heat Treatment',
+      fullName: 'Quench, temper, and stress relief',
       description:
-        'High-performance 125mm FSAPDS rounds engineered for maximum armor penetration with advanced ballistic design for modern tank warfare applications.',
+        'Batch furnaces with quench tanks and tempering ovens for mechanical properties and dimensional stability.',
       specifications: [
-        'Enhanced armor penetration',
-        'Advanced ballistic design',
-        'Modern tank warfare optimization',
-        'Superior kinetic energy transfer',
+        'Quench tanks (oil/water, per spec)',
+        'Tempering ovens with profiles',
+        'Hardness & microstructure checks',
+        'Process traceability',
       ],
       technicalSpecs: {
-        caliber: '125mm',
-        type: 'FSAPDS',
-        material: 'Depleted uranium/Tungsten core',
-        velocity: '1,700+ m/s',
-        applications: 'Heavy Main Battle Tanks',
+        caliber: 'N/A',
+        type: 'Heat Treatment',
+        material: 'As specified',
+        velocity: 'N/A',
+        applications: 'Loadâ€‘bearing parts',
       },
     },
     {
-      name: '120MM HESH',
-      fullName: '120MM High Explosive Squash Head',
+      name: 'Material Testing',
+      fullName: 'Mechanical & metallurgical testing',
       description:
-        'Specialized high explosive squash head rounds for anti-fortification and anti-armor applications, designed to deliver maximum blast effect against hardened targets.',
+        'Tensile, hardness, impact, and microstructure analysis to validate forging and heat treatment outcomes.',
       specifications: [
-        'High explosive squash head technology',
-        'Anti-fortification capabilities',
-        'Versatile target engagement',
-        'Maximum blast effectiveness',
+        'Tensile & hardness testing',
+        'Impact & toughness checks',
+        'Microstructure evaluation',
+        'Certification & reporting',
       ],
       technicalSpecs: {
-        caliber: '120mm',
-        type: 'HESH',
-        material: 'Plastic explosive with steel case',
-        effect: 'Spall generation',
-        applications: 'Anti-fortification/Anti-armor',
+        caliber: 'N/A',
+        type: 'Testing',
+        material: 'Lab specimens',
+        velocity: 'N/A',
+        applications: 'Qualification & production',
       },
     },
   ];
 
   const combustibleImageMap: Record<string, string> = {
-    '120MM FSAPDS': '/images/services/combustible/fsapds.svg',
-    '125MM FSAPDS': '/images/services/combustible/fsapds.svg',
-    '120MM HESH': '/images/services/combustible/hesh.svg',
+    'Hot Forging': '/images/services/forging/hot-forging.svg',
+    'Heat Treatment': '/images/services/forging/heat-treatment.svg',
+    'Material Testing': '/images/services/forging/material-testing.svg',
   };
 
   const manufacturingProcess = [
-    {
-      step: '1',
-      title: 'Combustible Case Production',
-      description:
-        'Specialized manufacturing of combustible cartridge cases using advanced materials',
-    },
-    {
-      step: '2',
-      title: 'Projectile Assembly',
-      description:
-        'Precision assembly of FSAPDS and HESH projectiles with quality control',
-    },
-    {
-      step: '3',
-      title: 'Propellant Loading',
-      description:
-        'Careful loading of propellant charges with exact specifications',
-    },
-    {
-      step: '4',
-      title: 'Final Integration',
-      description:
-        'Complete round assembly and comprehensive testing protocols',
-    },
+    { step: '1', title: 'Forge', description: 'Blank production under controlled heat' },
+    { step: '2', title: 'Trim & Rough', description: 'Flash removal and nearâ€‘net shaping' },
+    { step: '3', title: 'Heat Treat', description: 'Quench & temper to target properties' },
+    { step: '4', title: 'Validate', description: 'Hardness, microstructure, and reporting' },
   ];
 
   return (
@@ -121,15 +101,14 @@ export default function CombustibleCartridgeCases() {
                 Services
               </Link>
               <span className="mx-2">/</span>
-              <span className="text-white">Combustible Cartridge Cases</span>
+              <span className="text-white">Forging & Heat Treatment</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Combustible Cartridge Cases
+              Forging & Heat Treatment
             </h1>
             <p className="text-xl text-secondary-200 max-w-2xl">
-              Advanced combustible cartridge case technology for FSAPDS and HESH
-              rounds, delivering superior performance for main battle tank
-              applications.
+              Hot/cold forging, trimming, and standardized heat treatment for
+              defence components with validated mechanical properties.
             </p>
           </div>
         </div>
@@ -164,13 +143,12 @@ export default function CombustibleCartridgeCases() {
             {/* Left Content */}
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Combustible Case Technology
+                Forging & Heat Treatment Capabilities
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                Our combustible cartridge cases represent the pinnacle of
-                ammunition technology, designed to completely burn during
-                firing, leaving no residue in the gun barrel. This advanced
-                technology is essential for modern tank warfare applications.
+                From blanks to heat-treated parts, our metallurgy controls, press
+                capacity, and testing ensure consistent properties and
+                traceability across batches.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">

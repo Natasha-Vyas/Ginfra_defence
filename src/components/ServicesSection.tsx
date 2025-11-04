@@ -8,9 +8,9 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: 'Cartridge Cases',
+      title: 'Precision CNC Machining',
       description:
-        'High-precision cartridge cases manufactured to exact specifications for military and defense applications.',
+        'Multi-axis milling and turning for tight tolerances and complex geometries.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -29,16 +29,12 @@ const ServicesSection = () => {
       href: '/services/cartridge-cases',
       gradient: 'from-blue-500 to-cyan-500',
       bgGradient: 'from-blue-500/10 to-cyan-500/10',
-      features: [
-        'Precision Manufacturing',
-        'Military Grade',
-        'Quality Assured',
-      ],
+      features: ['4/5-axis capability', '±0.005 mm tolerance', 'Lot traceability'],
     },
     {
-      title: 'Combustible Cartridge Cases',
+      title: 'Forging & Heat Treatment',
       description:
-        'Advanced combustible cartridge cases designed for modern artillery systems with superior performance.',
+        'Hot/cold forging, trimming, and metallurgical heat treatment for structural parts.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -63,12 +59,12 @@ const ServicesSection = () => {
       href: '/services/combustible-cartridge-cases',
       gradient: 'from-orange-500 to-red-500',
       bgGradient: 'from-orange-500/10 to-red-500/10',
-      features: ['Combustible Design', 'Artillery Systems', 'High Performance'],
+      features: ['Press capacity up to X t', 'Quench + temper', 'Hardness validation'],
     },
     {
-      title: 'Mechanical Fuzes',
+      title: 'Electronics Integration & Assembly',
       description:
-        'Sophisticated mechanical fuzing systems engineered for reliability and precision in critical applications.',
+        'SMT/THT assembly, sensor integration, harnessing, potting, and functional test.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -93,16 +89,12 @@ const ServicesSection = () => {
       href: '/services/mechanical-fuzes',
       gradient: 'from-green-500 to-emerald-500',
       bgGradient: 'from-green-500/10 to-emerald-500/10',
-      features: [
-        'Precision Engineering',
-        'Reliable Systems',
-        'Critical Applications',
-      ],
+      features: ['ESD-safe lines', 'AOI/ICT/functional', 'Conformal coating'],
     },
     {
-      title: 'Modular Charge Systems',
+      title: 'Quality & Compliance',
       description:
-        'Innovative modular charge systems providing flexibility and efficiency for various defense requirements.',
+        'Dimensional, environmental, and NDT testing with full documentation and traceability.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -121,7 +113,7 @@ const ServicesSection = () => {
       href: '/services/modular-charge-systems',
       gradient: 'from-purple-500 to-indigo-500',
       bgGradient: 'from-purple-500/10 to-indigo-500/10',
-      features: ['Modular Design', 'Flexible Systems', 'Defense Ready'],
+      features: ['ISO 9001/AS9100', 'MIL-STD/STANAG', '100% serialization'],
     },
   ];
 
@@ -146,7 +138,7 @@ const ServicesSection = () => {
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
             <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-              Precision Manufacturing
+              Defence Manufacturing
             </span>
             <br />
             <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
@@ -155,8 +147,8 @@ const ServicesSection = () => {
           </h2>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Delivering world-class manufacturing solutions for defense and
-            aerospace applications with uncompromising quality and precision.
+            Ginfra Dynamic delivers defence-grade manufacturing for munitions and
+            sub-systems with uncompromising quality, precision, and traceability.
           </p>
         </div>
 

@@ -74,7 +74,7 @@ const HeroSection = () => {
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30 hover:bg-blue-500/30 transition-all duration-300">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-blue-200">
-                Advanced Defence Manufacturing
+                Ginfra Dynamic — Defence Manufacturing
               </span>
             </div>
 
@@ -89,17 +89,14 @@ const HeroSection = () => {
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
-                  Defence & Aerospace
+                  Defence Programs
                 </span>
               </h1>
 
               <p className="text-base md:text-lg text-slate-300 max-w-2xl leading-relaxed">
-                Building next-generation manufacturing capabilities for
-                <span className="text-cyan-400 font-semibold bg-cyan-400/10 px-1 rounded">
-                  {' '}
-                  mission-critical components
-                </span>{' '}
-                with uncompromising precision and reliability.
+                Ginfra Dynamic builds next-generation manufacturing capabilities for
+                <span className="text-cyan-400 font-semibold bg-cyan-400/10 px-1 rounded">{' '}mission-critical components</span>{' '}
+                with uncompromising precision, reliability, and full traceability.
               </p>
             </div>
 

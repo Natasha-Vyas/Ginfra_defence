@@ -1,50 +1,50 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function ModularChargeSystems() {
   const products = [
     {
-      name: 'BMCS - 155MM M91',
-      fullName: 'Bi-Modular Charge System - 155MM M91',
+      name: 'Dimensional Validation',
+      fullName: 'CMM and metrology checks',
       description:
-        'Advanced bi-modular charge system for 155mm artillery with scalable range control and superior ballistic performance, designed for modern artillery systems requiring precision and flexibility.',
+        'CMM, optical, and gauge inspection with GR&R and CTQ coverage for first-article and production lots.',
       specifications: [
-        'Scalable range control capability',
-        'Superior ballistic performance',
-        'Modular charge configuration',
-        '155mm artillery compatibility',
+        'FAI/PPAP packages',
+        'CTQ coverage',
+        'Gauge R&R studies',
+        'Lot-wise reports',
       ],
       technicalSpecs: {
-        caliber: '155mm',
-        system: 'Bi-Modular (M91)',
-        range: 'Variable (5-30+ km)',
-        charges: 'Multiple incremental charges',
-        compatibility: 'NATO standard artillery',
+        caliber: 'N/A',
+        system: 'Metrology',
+        range: 'Per drawing',
+        charges: 'N/A',
+        compatibility: 'MIL/NATO specs',
       },
     },
     {
-      name: 'BMCS - 155MM M92',
-      fullName: 'Bi-Modular Charge System - 155MM M92',
+      name: 'Environmental Testing',
+      fullName: 'Climatic & mechanical tests',
       description:
-        'Enhanced 155mm M92 bi-modular charge system offering improved range capabilities and advanced ballistic characteristics for next-generation artillery applications.',
+        'Temperature, humidity, vibration, and shock profiles executed to validate environmental robustness.',
       specifications: [
-        'Enhanced range capabilities',
-        'Advanced ballistic characteristics',
-        'Next-generation compatibility',
-        'Improved accuracy and precision',
+        'Thermal cycling',
+        'Humidity soak',
+        'Vibration & shock',
+        'Acceptance test plans',
       ],
       technicalSpecs: {
-        caliber: '155mm',
-        system: 'Bi-Modular (M92)',
-        range: 'Extended (8-40+ km)',
-        charges: 'Advanced modular configuration',
-        compatibility: 'Modern artillery systems',
+        caliber: 'N/A',
+        system: 'Environmental',
+        range: 'As specified',
+        charges: 'N/A',
+        compatibility: 'MIL-STD-810',
       },
     },
   ];
 
-  const bmcsImageMap: Record<string, string> = {
-    'BMCS - 155MM M91': '/images/services/modular/bmcs.svg',
-    'BMCS - 155MM M92': '/images/services/modular/bmcs.svg',
+    const bmcsImageMap: Record<string, string> = {
+    'Dimensional Validation': '/images/services/qa/dimensional.svg',
+    'Environmental Testing': '/images/services/qa/environmental.svg',
   };
 
   const advantages = [
@@ -172,15 +172,14 @@ export default function ModularChargeSystems() {
                 Services
               </Link>
               <span className="mx-2">/</span>
-              <span className="text-white">Modular Charge Systems</span>
+              <span className="text-white">Quality & Compliance</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Modular Charge Systems
+              Quality & Compliance
             </h1>
             <p className="text-xl text-secondary-200 max-w-2xl">
-              Advanced bi-modular charge systems for 155mm artillery, delivering
-              scalable range control and superior ballistic performance for
-              modern warfare applications.
+              Dimensional, environmental, and NDT testing with documentation,
+              serialization, and standards compliance for defence programs.
             </p>
           </div>
         </div>
@@ -193,14 +192,12 @@ export default function ModularChargeSystems() {
             {/* Left Content */}
             <div>
               <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Bi-Modular Charge Technology
+                Quality & Compliance Capabilities
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                Our Bi-Modular Charge Systems (BMCS) represent cutting-edge
-                artillery technology, providing unprecedented flexibility in
-                range control and ballistic performance. These systems are
-                designed to meet the demanding requirements of modern artillery
-                operations.
+                We implement defence-grade QA frameworks including FAI/PPAP,
+                dimensional validation, environmental testing, NDT, and
+                full-chain traceability to MIL/NATO and ISO/AS standards.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -348,7 +345,7 @@ export default function ModularChargeSystems() {
                   {/* Product Image */}
                   <div className="lg:col-span-1 h-64 lg:h-auto">
                     <img
-                      src={bmcsImageMap[product.name] ?? '/images/services/modular/bmcs.svg'}
+                      src={bmcsImageMap[product.name] ?? '/images/services/qa/environmental.svg'}
                       alt={product.name}
                       className="w-full h-full object-cover"
                       loading="lazy"

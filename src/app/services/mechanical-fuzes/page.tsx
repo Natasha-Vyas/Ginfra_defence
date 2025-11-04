@@ -1,17 +1,17 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function MechanicalFuzes() {
   const fuzeTypes = [
     {
-      name: 'Point Detonating (PD) Fuze',
-      calibers: '23MM, 30MM, 40MM',
+      name: 'SMT/THT Assembly',
+      calibers: 'ESD-safe lines',
       description:
-        'Precision point detonating fuzes designed for immediate impact detonation with advanced safety mechanisms and reliable performance across various calibers.',
+        'Automated SMT placement and selective soldering, with AOI and process controls for defence electronics.',
       specifications: [
-        'Immediate impact detonation',
-        'Advanced safety mechanisms',
-        'Multi-caliber compatibility',
-        'Reliable performance under extreme conditions',
+        'SMT + THT capability',
+        'Selective soldering',
+        'AOI & IPC standards',
+        'Traceable materials',
       ],
       technicalSpecs: {
         activation: 'Impact triggered',
@@ -21,33 +21,33 @@ export default function MechanicalFuzes() {
       },
     },
     {
-      name: 'Time Proximity/Timed Fuze',
-      calibers: '23MM, 30MM, 40MM',
+      name: 'Sensor Integration & Potting',
+      calibers: 'Sealing & protection',
       description:
-        'Advanced timing fuzes with proximity detection capabilities, offering precise detonation control for maximum effectiveness against various target types.',
+        'Integration of sensors and harnesses with controlled potting and conformal coating for harsh environments.',
       specifications: [
-        'Precision timing control',
-        'Proximity detection capability',
-        'Variable detonation settings',
-        'Enhanced target effectiveness',
+        'Harness assembly',
+        'Potting & encapsulation',
+        'Conformal coat',
+        'Environmental sealing',
       ],
       technicalSpecs: {
         activation: 'Time/Proximity based',
         timing: 'Programmable delays',
         detection: 'Proximity sensors',
-        accuracy: '±0.1 second precision',
+        accuracy: 'Â±0.1 second precision',
       },
     },
     {
-      name: 'Proximity/Timed Fuze',
-      calibers: 'Various calibers',
+      name: 'Functional Test & Calibration',
+      calibers: 'ICT/Functional',
       description:
-        'Sophisticated fuze systems combining proximity detection with timed detonation for optimal performance in diverse combat scenarios and target engagement.',
+        'Electrical, firmware, and functional validation including calibration and burn-in per acceptance plans.',
       specifications: [
-        'Dual-mode operation',
-        'Proximity and timed functions',
-        'Optimal combat performance',
-        'Diverse target engagement',
+        'ICT & boundary scan',
+        'Functional ATE',
+        'Burn-in profiles',
+        'Calibration routines',
       ],
       technicalSpecs: {
         activation: 'Dual-mode system',
@@ -57,15 +57,15 @@ export default function MechanicalFuzes() {
       },
     },
     {
-      name: 'Safety & Arming Device',
-      calibers: 'All supported calibers',
+      name: 'Documentation & Traceability',
+      calibers: 'Lot & serial control',
       description:
-        'Critical safety and arming mechanisms ensuring secure handling, transport, and reliable activation when required, meeting the highest safety standards.',
+        '100% serialization, device master records, and compliance documentation aligned to defence standards.',
       specifications: [
-        'Secure handling and transport',
-        'Reliable activation system',
-        'Highest safety standards',
-        'Fail-safe mechanisms',
+        'DMR & DHR',
+        'Serialization & labels',
+        'FAI/PPAP packages',
+        'Audit-ready records',
       ],
       technicalSpecs: {
         safety: 'Multiple redundant systems',
@@ -77,10 +77,10 @@ export default function MechanicalFuzes() {
   ];
 
   const fuzeImageMap: Record<string, string> = {
-    'Point Detonating (PD) Fuze': '/images/services/fuzes/pd.svg',
-    'Time Proximity/Timed Fuze': '/images/services/fuzes/time-proximity.svg',
-    'Proximity/Timed Fuze': '/images/services/fuzes/proximity-timed.svg',
-    'Safety & Arming Device': '/images/services/fuzes/safety-arming.svg',
+    'SMT/THT Assembly': '/images/services/electronics/smt.svg',
+    'Sensor Integration & Potting': '/images/services/electronics/potting.svg',
+    'Functional Test & Calibration': '/images/services/electronics/test-calibration.svg',
+    'Documentation & Traceability': '/images/services/electronics/documentation.svg',
   };
 
   const internalComponents = [
@@ -200,15 +200,14 @@ export default function MechanicalFuzes() {
                 Services
               </Link>
               <span className="mx-2">/</span>
-              <span className="text-white">Mechanical Fuzes</span>
+              <span className="text-white">Electronics Integration & Assembly</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Mechanical Fuzes & Components
+              Electronics Integration & Assembly
             </h1>
             <p className="text-xl text-secondary-200 max-w-2xl">
-              Precision mechanical fuzes for various calibers with advanced
-              safety and arming mechanisms, designed for reliable performance in
-              critical defense applications.
+              SMT/THT assembly, sensor integration, harnessing, potting, and
+              functional testing with ESD-safe processes and full traceability.
             </p>
           </div>
         </div>
@@ -376,7 +375,7 @@ export default function MechanicalFuzes() {
                   {/* Product Image */}
                   <div className="lg:col-span-1 h-64 lg:h-auto">
                     <img
-                      src={fuzeImageMap[fuze.name] ?? '/images/services/fuzes/pd.svg'}
+                      src={fuzeImageMap[fuze.name] ?? '/images/services/electronics/smt.svg'}
                       alt={fuze.name}
                       className="w-full h-full object-cover"
                       loading="lazy"
