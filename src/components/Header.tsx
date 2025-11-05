@@ -16,10 +16,17 @@ const Header = () => {
   ];
 
   const servicesDropdown = [
-    { name: 'Precision CNC Machining', href: '/services/cartridge-cases' },
-    { name: 'Forging & Heat Treatment', href: '/services/combustible-cartridge-cases' },
-    { name: 'Quality & Compliance', href: '/services/modular-charge-systems' },
-    { name: 'Electronics Integration & Assembly', href: '/services/mechanical-fuzes' },
+    // Manufacturing Services
+    { name: 'CNC Services', href: '/services/cnc-services' },
+    { name: 'Electronics Services', href: '/services/electronics-services' },
+    { name: 'Forging Services', href: '/services/forging-services' },
+    { name: 'Quality Assurance', href: '/services/quality-assurance' },
+    // Product Categories
+    { name: 'Cartridge Cases', href: '/services/cartridge-cases' },
+    { name: 'Combustible Cartridge Cases', href: '/services/combustible-cartridge-cases' },
+    { name: 'Modular Charge Systems', href: '/services/modular-charge-systems' },
+    { name: 'Mechanical Fuzes', href: '/services/mechanical-fuzes' },
+    // Overview
     { name: 'All Services', href: '/services' },
   ];
 
@@ -93,7 +100,7 @@ const Header = () => {
 
               {/* Dropdown Menu */}
               {isServicesOpen && (
-                <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                <div className="absolute top-full left-0 pt-2 w-80 z-50">
                   <div className="bg-white rounded-lg shadow-xl border border-secondary-200 py-2">
                     {servicesDropdown.map((item) => (
                       <Link

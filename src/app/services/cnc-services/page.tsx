@@ -1,107 +1,107 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import CTASection from '@/components/CTASection';
 import { useState } from 'react';
 
-export default function CartridgeCases() {
+export default function CNCServices() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   
-  const cartridgeCases = [
+  const cncServices = [
     {
-      name: '23MM Cartridge Case',
-      caliber: '23mm',
+      name: '5-Axis Machining',
+      capabilities: 'Complex geometries',
       description:
-        'High-performance cartridge case for 23mm applications with anti-flying aircraft and armoured aerial vehicles capabilities',
+        'Advanced 5-axis CNC machining for complex defense components with tight tolerances and superior surface finishes.',
       specifications: [
-        'Anti-flying aircraft engagement',
-        'Armoured aerial vehicles targeting',
-        'Light armoured vehicles defense',
-        'Enemy protection systems',
+        'Multi-axis capability',
+        'Complex geometries',
+        'Tight tolerances ±0.001"',
+        'Superior surface finish',
       ],
       technicalSpecs: {
-        caliber: '23mm',
-        material: 'High-grade steel alloy',
-        finish: 'Corrosion-resistant coating',
-        applications: 'Air defense systems',
+        accuracy: '±0.001" (±0.025mm)',
+        materials: 'Aluminum, Steel, Titanium',
+        capacity: 'Up to 1500mm x 800mm',
+        spindle: '40,000 RPM capability',
       },
-      icon: '/images/services/cartridge-cases/23mm.svg',
+      icon: '/images/services/cnc/5-axis.svg',
     },
     {
-      name: '30MM Cartridge Case',
-      caliber: '30mm',
+      name: 'Precision Turning',
+      capabilities: 'Rotational components',
       description:
-        '30mm cartridge case with anti-armour capabilities and advanced ballistic performance for versatile engagement scenarios',
+        'High-precision turning operations for cylindrical components, shafts, and rotational defense hardware.',
       specifications: [
-        'Anti-armour penetration',
-        'All defense systems compatibility',
-        'Naval point defense applications',
-        'Light armoured vehicle suspension',
+        'Live tooling capability',
+        'Sub-spindle operations',
+        'Automatic bar feeding',
+        'In-process measurement',
       ],
       technicalSpecs: {
-        caliber: '30mm',
-        material: 'Precision-forged steel',
-        finish: 'Military-grade coating',
-        applications: 'Multi-role combat systems',
+        diameter: 'Up to 320mm',
+        length: 'Up to 1000mm',
+        tolerance: '±0.005mm',
+        surface: 'Ra 0.8μm achievable',
       },
-      icon: '/images/services/cartridge-cases/30mm.svg',
+      icon: '/images/services/cnc/turning.svg',
     },
     {
-      name: '40MM Cartridge Case',
-      caliber: '40mm',
+      name: 'Bores & Threading',
+      capabilities: 'Internal features',
       description:
-        '40mm cartridge case supporting high-velocity armor-piercing and programmable airburst munitions for enhanced battlefield effectiveness',
+        'Specialized boring and threading operations for critical internal features in defense components.',
       specifications: [
-        'HVG suppression capabilities',
-        'Anti-vehicle engagement',
-        'Close range naval defense',
-        'Programmable airburst capability',
+        'Deep hole boring',
+        'Precision threading',
+        'Internal profiling',
+        'Honing capability',
       ],
       technicalSpecs: {
-        caliber: '40mm',
-        material: 'Advanced alloy composition',
-        finish: 'Enhanced durability coating',
-        applications: 'Grenade launcher systems',
+        bore_depth: 'Up to 20:1 L/D ratio',
+        thread_pitch: '0.5mm to 6mm',
+        bore_tolerance: '±0.01mm',
+        surface_finish: 'Ra 0.4μm',
       },
-      icon: '/images/services/cartridge-cases/40mm.svg',
+      icon: '/images/services/cnc/bores-threads.svg',
     },
     {
-      name: '105MM Cartridge Case',
-      caliber: '105mm',
+      name: 'Surface Finishing',
+      capabilities: 'Final operations',
       description:
-        '105mm cartridge case for medium-range artillery applications with superior armor penetration capabilities and extended range performance',
+        'Comprehensive surface finishing operations including grinding, polishing, and coating preparation.',
       specifications: [
-        'Superior armor penetration',
-        'Long-range artillery support',
-        'Tank main gun compatibility',
-        'Artillery fire support systems',
+        'Precision grinding',
+        'Surface polishing',
+        'Deburring operations',
+        'Coating preparation',
       ],
       technicalSpecs: {
-        caliber: '105mm',
-        material: 'Heavy-duty steel construction',
-        finish: 'Weather-resistant treatment',
-        applications: 'Medium artillery systems',
+        roughness: 'Ra 0.1μm achievable',
+        flatness: '±0.005mm',
+        parallelism: '±0.01mm',
+        coating_prep: 'Blast & chemical clean',
       },
-      icon: '/images/services/cartridge-cases/105mm.svg',
+      icon: '/images/services/cnc/finishing.svg',
     },
     {
-      name: '155MM Cartridge Case',
-      caliber: '155mm',
+      name: 'Rapid Prototyping',
+      capabilities: 'Development support',
       description:
-        '155mm cartridge case for long-range artillery systems with high explosive capabilities and precision targeting for maximum battlefield impact',
+        'Fast-turnaround prototyping services for defense component development and testing phases.',
       specifications: [
-        'Long-range artillery precision',
-        'High explosive payload capacity',
-        'Advanced targeting systems',
-        'Extended range capabilities',
+        'Quick turnaround',
+        'Material flexibility',
+        'Design optimization',
+        'Testing support',
       ],
       technicalSpecs: {
-        caliber: '155mm',
-        material: 'Premium steel alloy',
-        finish: 'Military specification coating',
-        applications: 'Heavy artillery systems',
+        lead_time: '24-72 hours typical',
+        materials: 'Wide range available',
+        complexity: 'High complexity capable',
+        quantities: '1-100 pieces',
       },
-      icon: '/images/services/cartridge-cases/155mm.svg',
+      icon: '/images/services/cnc/prototyping.svg',
     },
   ];
 
@@ -124,7 +124,7 @@ export default function CartridgeCases() {
       ),
       title: 'Precision Manufacturing',
       description:
-        'State-of-the-art precision forging and CNC machining for tight tolerances and consistent quality',
+        'Advanced CNC capabilities with tolerances down to ±0.001" for critical defense components',
     },
     {
       icon: (
@@ -142,8 +142,8 @@ export default function CartridgeCases() {
           />
         </svg>
       ),
-      title: 'Superior Materials',
-      description: 'Advanced metallurgy for superior strength and durability in demanding conditions',
+      title: 'Advanced Equipment',
+      description: '5-axis machining centers with live tooling and automated systems',
     },
     {
       icon: (
@@ -161,9 +161,9 @@ export default function CartridgeCases() {
           />
         </svg>
       ),
-      title: 'Quality Assurance',
+      title: 'Fast Turnaround',
       description:
-        'Comprehensive quality control and testing protocols ensuring uncompromising reliability',
+        'Rapid prototyping and production capabilities with 24-72 hour turnaround options',
     },
   ];
 
@@ -233,24 +233,24 @@ export default function CartridgeCases() {
                 Services
               </Link>
               <span className="mx-2 text-primary-300">/</span>
-              <span className="text-white">Cartridge Cases</span>
+              <span className="text-white">CNC Services</span>
             </nav>
             
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-blue-200">
-                Cartridge Cases
+                CNC Services
               </span>
             </div>
             
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
-                Cartridge Cases
+                CNC Machining Services
               </span>
             </h1>
             <p className="text-xl text-secondary-200">
-              Precision-manufactured cartridge cases for various calibers, designed for 
-              superior performance in defense applications with uncompromising quality and reliability.
+              Advanced CNC machining capabilities with 5-axis precision, tight tolerances,
+              and comprehensive manufacturing solutions for defense applications.
             </p>
           </div>
         </div>
@@ -266,8 +266,36 @@ export default function CartridgeCases() {
 
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            {/* Right Image Placeholder */}
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 h-80 flex items-center justify-center order-2 lg:order-1 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
+              <div className="text-center">
+                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg
+                    className="w-12 h-12 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <p className="text-secondary-600">Precision CNC Machining</p>
+              </div>
+            </div>
+
             {/* Left Content */}
-            <div>
+            <div className="order-1 lg:order-2">
               <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
                 <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
                 <span className="text-sm font-medium text-blue-700">
@@ -276,13 +304,14 @@ export default function CartridgeCases() {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-                  Advanced Cartridge Case Manufacturing
+                  Precision CNC Technology
                 </span>
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                Our cartridge cases are manufactured using state-of-the-art precision forging 
-                and machining processes, ensuring consistent quality and performance across all 
-                calibers. Each case undergoes rigorous testing to meet the highest defense standards.
+                Our state-of-the-art CNC machining capabilities deliver precision
+                components for critical defense applications. From complex 5-axis
+                geometries to high-volume production runs, we maintain the highest
+                standards of quality and accuracy.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -302,7 +331,7 @@ export default function CartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Precision forging and CNC machining for tight tolerances
+                    5-axis machining for complex geometries
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -322,7 +351,7 @@ export default function CartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Advanced metallurgy for superior strength and durability
+                    Tolerances down to ±0.001" (±0.025mm)
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -342,33 +371,9 @@ export default function CartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Comprehensive quality control and testing protocols
+                    Wide range of materials including titanium
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Right Image Placeholder */}
-            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 h-80 flex items-center justify-center border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <svg
-                    className="w-12 h-12 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
-                    />
-                  </svg>
-                </div>
-                <p className="text-secondary-600">
-                  Cartridge Case Manufacturing Process
-                </p>
               </div>
             </div>
           </div>
@@ -389,23 +394,23 @@ export default function CartridgeCases() {
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-blue-700">
-                Manufacturing Excellence
+                Capabilities
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-                Quality &
+                Manufacturing
               </span>
               <br />
               <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
-                Performance
+                Capabilities
               </span>
             </h2>
 
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Our cartridge cases are engineered for maximum performance and reliability
-              in critical defense applications.
+              Advanced CNC machining capabilities designed for precision defense
+              manufacturing and critical component production.
             </p>
           </div>
 
@@ -435,7 +440,7 @@ export default function CartridgeCases() {
         </div>
       </section>
 
-      {/* Cartridge Cases Range Section */}
+      {/* CNC Services Section */}
       <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
@@ -449,28 +454,28 @@ export default function CartridgeCases() {
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
               <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-blue-700">
-                Product Range
+                Service Range
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
-                Our Cartridge Case
+                CNC Services &
               </span>
               <br />
               <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
-                Range
+                Capabilities
               </span>
             </h2>
 
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive range of precision-manufactured cartridge cases for
-              various defense applications
+              Comprehensive CNC machining services from prototyping to production,
+              covering all aspects of precision manufacturing.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cartridgeCases.map((product, index) => (
+            {cncServices.map((service, index) => (
               <div
                 key={index}
                 className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
@@ -492,22 +497,28 @@ export default function CartridgeCases() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
                       />
                     </svg>
                   </div>
 
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
-                      {product.name}
+                      {service.name}
                     </h3>
                     <span className="text-blue-600 font-semibold bg-blue-100 px-3 py-1 rounded-full text-sm">
-                      {product.caliber}
+                      {service.capabilities}
                     </span>
                   </div>
 
                   <p className="text-slate-600 mb-6 leading-relaxed">
-                    {product.description}
+                    {service.description}
                   </p>
 
                   <div className="space-y-4">
@@ -516,7 +527,7 @@ export default function CartridgeCases() {
                         Key Features:
                       </h4>
                       <ul className="space-y-1">
-                        {product.specifications.map((spec, specIndex) => (
+                        {service.specifications.map((spec, specIndex) => (
                           <li
                             key={specIndex}
                             className="flex items-start space-x-2"
@@ -536,11 +547,11 @@ export default function CartridgeCases() {
                           Technical Specs:
                         </h4>
                         <div className="space-y-1">
-                          {Object.entries(product.technicalSpecs).map(
+                          {Object.entries(service.technicalSpecs).map(
                             ([key, value]) => (
                               <div key={key} className="flex justify-between">
                                 <span className="text-secondary-600 text-xs capitalize">
-                                  {key.replace(/([A-Z])/g, ' $1')}:
+                                  {key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}:
                                 </span>
                                 <span className="text-secondary-900 text-xs font-medium">
                                   {value}

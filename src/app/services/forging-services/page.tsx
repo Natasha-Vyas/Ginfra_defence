@@ -1,92 +1,69 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import CTASection from '@/components/CTASection';
 import { useState } from 'react';
 
-export default function CombustibleCartridgeCases() {
+export default function ForgingServices() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   
-  const products = [
+  const forgingServices = [
     {
-      name: '120MM FSAPDS',
-      fullName: '120MM Fin-Stabilized Armor-Piercing Discarding Sabot',
+      name: 'Hot Forging',
+      capabilities: 'High-strength components',
       description:
-        'Advanced fin-stabilized armor-piercing discarding sabot rounds designed for main battle tanks with superior penetration capabilities and high-velocity performance.',
+        'Advanced hot forging processes for critical defense components requiring superior mechanical properties and structural integrity.',
       specifications: [
-        'Fin-stabilized flight trajectory',
-        'Armor-piercing discarding sabot technology',
-        'Main battle tank compatibility',
-        'High-velocity penetration capability',
+        'Up to 5000 ton capacity',
+        'Complex geometries',
+        'Superior grain structure',
+        'Reduced material waste',
       ],
       technicalSpecs: {
-        caliber: '120mm',
-        type: 'FSAPDS',
-        material: 'Tungsten core with sabot',
-        velocity: '1,650+ m/s',
-        applications: 'Main Battle Tanks',
+        capacity: '5000 ton press',
+        temperature: '1200°C capability',
+        materials: 'Steel, Titanium, Inconel',
+        tolerance: '±0.5mm typical',
       },
+      icon: '/images/services/forging/hot-forging.svg',
     },
     {
-      name: '125MM FSAPDS',
-      fullName: '125MM Fin-Stabilized Armor-Piercing Discarding Sabot',
+      name: 'Heat Treatment',
+      capabilities: 'Property optimization',
       description:
-        'High-performance 125mm FSAPDS rounds engineered for maximum armor penetration with advanced ballistic design for modern tank warfare applications.',
+        'Comprehensive heat treatment services including hardening, tempering, and stress relief for optimal material properties.',
       specifications: [
-        'Enhanced armor penetration',
-        'Advanced ballistic design',
-        'Modern tank warfare optimization',
-        'Superior kinetic energy transfer',
+        'Controlled atmosphere',
+        'Precise temperature control',
+        'Stress relief operations',
+        'Property verification',
       ],
       technicalSpecs: {
-        caliber: '125mm',
-        type: 'FSAPDS',
-        material: 'Depleted uranium/Tungsten core',
-        velocity: '1,700+ m/s',
-        applications: 'Heavy Main Battle Tanks',
+        temperature: 'Up to 1200°C',
+        atmosphere: 'Controlled/Vacuum',
+        uniformity: '±5°C throughout',
+        capacity: '10 ton furnace',
       },
+      icon: '/images/services/forging/heat-treatment.svg',
     },
     {
-      name: '120MM HESH',
-      fullName: '120MM High Explosive Squash Head',
+      name: 'Material Testing',
+      capabilities: 'Quality verification',
       description:
-        'Specialized high explosive squash head rounds for anti-fortification and anti-armor applications, designed to deliver maximum blast effect against hardened targets.',
+        'Comprehensive material testing including mechanical properties, metallurgical analysis, and non-destructive testing.',
       specifications: [
-        'High explosive squash head technology',
-        'Anti-fortification capabilities',
-        'Versatile target engagement',
-        'Maximum blast effectiveness',
+        'Tensile & impact testing',
+        'Metallurgical analysis',
+        'NDT inspection',
+        'Chemical composition',
       ],
       technicalSpecs: {
-        caliber: '120mm',
-        type: 'HESH',
-        material: 'Plastic explosive with steel case',
-        effect: 'Spall generation',
-        applications: 'Anti-fortification/Anti-armor',
+        tensile: 'Up to 2000kN',
+        hardness: 'HRC, HV, HB',
+        ndt: 'UT, MT, PT, RT',
+        microscopy: 'Optical & SEM',
       },
-    },
-  ];
-
-  const manufacturingProcess = [
-    { 
-      step: '1', 
-      title: 'Combustible Case Production', 
-      description: 'Specialized manufacturing of combustible cartridge cases using advanced materials' 
-    },
-    { 
-      step: '2', 
-      title: 'Projectile Assembly', 
-      description: 'Precision assembly of FSAPDS and HESH projectiles with quality control' 
-    },
-    { 
-      step: '3', 
-      title: 'Propellant Loading', 
-      description: 'Careful loading of propellant charges with exact specifications' 
-    },
-    { 
-      step: '4', 
-      title: 'Final Integration', 
-      description: 'Complete round assembly and comprehensive testing protocols' 
+      icon: '/images/services/forging/material-testing.svg',
     },
   ];
 
@@ -103,19 +80,13 @@ export default function CombustibleCartridgeCases() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
           />
         </svg>
       ),
-      title: 'Complete Combustion',
+      title: 'Superior Strength',
       description:
-        'Advanced combustible case technology that completely burns during firing, leaving no residue',
+        'Hot forging processes create superior grain structure and mechanical properties for critical applications',
     },
     {
       icon: (
@@ -133,8 +104,8 @@ export default function CombustibleCartridgeCases() {
           />
         </svg>
       ),
-      title: 'FSAPDS & HESH Integration',
-      description: 'Advanced projectile integration for superior battlefield performance',
+      title: 'Advanced Materials',
+      description: 'Capability to forge exotic materials including titanium and high-temperature alloys',
     },
     {
       icon: (
@@ -148,13 +119,13 @@ export default function CombustibleCartridgeCases() {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
           />
         </svg>
       ),
-      title: 'Tank Warfare Optimized',
+      title: 'Quality Assurance',
       description:
-        'Specifically designed and optimized for main battle tank applications',
+        'Comprehensive testing and verification including NDT and metallurgical analysis',
     },
   ];
 
@@ -224,30 +195,30 @@ export default function CombustibleCartridgeCases() {
                 Services
               </Link>
               <span className="mx-2 text-primary-300">/</span>
-              <span className="text-white">Combustible Cartridge Cases</span>
+              <span className="text-white">Forging Services</span>
             </nav>
             
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-200/50 mb-6">
               <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-orange-200">
-                Combustible Cartridge Cases
+                Forging Services
               </span>
             </div>
             
             <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-white via-orange-100 to-amber-200 bg-clip-text text-transparent">
-                Combustible Cartridge Cases
+                Advanced Forging Solutions
               </span>
             </h1>
             <p className="text-xl text-secondary-200">
-              Advanced combustible cartridge case technology for FSAPDS and HESH rounds, 
-              delivering superior performance for main battle tank applications.
+              High-capacity forging capabilities with heat treatment and comprehensive
+              material testing for critical defense applications.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Content Section with Left/Right Layout */}
+      {/* Content Section with Right/Left Layout */}
       <section className="relative bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 section-padding overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
@@ -271,17 +242,11 @@ export default function CombustibleCartridgeCases() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+                      d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
                     />
                   </svg>
                 </div>
-                <p className="text-secondary-600">FSAPDS & HESH Technology</p>
+                <p className="text-secondary-600">Hot Forging Operations</p>
               </div>
             </div>
 
@@ -290,18 +255,19 @@ export default function CombustibleCartridgeCases() {
               <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-200/50 mb-6">
                 <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
                 <span className="text-sm font-medium text-orange-700">
-                  Advanced Technology
+                  Heavy Industry
                 </span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                 <span className="bg-gradient-to-r from-slate-900 via-orange-800 to-amber-800 bg-clip-text text-transparent">
-                  Combustible Case Technology
+                  Precision Forging Technology
                 </span>
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                Our combustible cartridge cases represent the pinnacle of ammunition technology, 
-                designed to completely burn during firing, leaving no residue in the gun barrel. 
-                This advanced technology is essential for modern tank warfare applications.
+                Our advanced forging capabilities deliver superior mechanical properties
+                through controlled hot forging processes. Combined with comprehensive
+                heat treatment and material testing, we ensure optimal performance
+                for critical defense applications.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -321,7 +287,7 @@ export default function CombustibleCartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Complete combustion technology eliminates barrel residue
+                    5000 ton forging capacity for large components
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -341,7 +307,7 @@ export default function CombustibleCartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Advanced FSAPDS and HESH projectile integration
+                    Advanced materials including titanium and Inconel
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -361,7 +327,7 @@ export default function CombustibleCartridgeCases() {
                     </svg>
                   </div>
                   <p className="text-secondary-700">
-                    Optimized for main battle tank applications
+                    Comprehensive testing and quality verification
                   </p>
                 </div>
               </div>
@@ -384,23 +350,23 @@ export default function CombustibleCartridgeCases() {
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-200/50 mb-6">
               <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-orange-700">
-                Technology Features
+                Forging Excellence
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-orange-800 to-amber-800 bg-clip-text text-transparent">
-                Advanced
+                Manufacturing
               </span>
               <br />
               <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
-                Technology
+                Advantages
               </span>
             </h2>
 
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Our combustible cartridge cases incorporate cutting-edge technology
-              for superior performance in modern warfare applications.
+              Advanced forging processes delivering superior mechanical properties
+              and structural integrity for critical defense applications.
             </p>
           </div>
 
@@ -430,67 +396,7 @@ export default function CombustibleCartridgeCases() {
         </div>
       </section>
 
-      {/* Manufacturing Process Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-orange-50 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-amber-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-red-500/3 rounded-full blur-3xl"></div>
-        </div>
-
-        <div className="container-custom relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-200/50 mb-6">
-              <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
-              <span className="text-sm font-medium text-orange-700">
-                Manufacturing Process
-              </span>
-            </div>
-
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-              <span className="bg-gradient-to-r from-slate-900 via-orange-800 to-amber-800 bg-clip-text text-transparent">
-                Manufacturing
-              </span>
-              <br />
-              <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
-                Process
-              </span>
-            </h2>
-
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Our specialized manufacturing process ensures the highest quality
-              combustible cartridge cases
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {manufacturingProcess.map((process, index) => (
-              <div
-                key={index}
-                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-slate-200/50 hover:border-orange-300/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2"
-              >
-                {/* Gradient border effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    {process.step}
-                  </div>
-                  <h3 className="text-lg font-semibold text-slate-800 mb-3 group-hover:text-orange-600 transition-colors duration-300">
-                    {process.title}
-                  </h3>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {process.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Product Range Section */}
+      {/* Forging Services Section */}
       <section className="relative bg-gradient-to-br from-slate-50 via-orange-50 to-amber-50 section-padding overflow-hidden">
         {/* Background Elements */}
         <div className="absolute inset-0">
@@ -504,96 +410,100 @@ export default function CombustibleCartridgeCases() {
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 backdrop-blur-sm rounded-full border border-orange-200/50 mb-6">
               <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 animate-pulse"></div>
               <span className="text-sm font-medium text-orange-700">
-                Product Range
+                Service Portfolio
               </span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               <span className="bg-gradient-to-r from-slate-900 via-orange-800 to-amber-800 bg-clip-text text-transparent">
-                Product
+                Forging Services &
               </span>
               <br />
               <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
-                Range
+                Capabilities
               </span>
             </h2>
 
             <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive range of combustible cartridge case solutions for
-              modern warfare
+              Comprehensive forging services from hot forming to heat treatment,
+              with full material testing and quality verification.
             </p>
           </div>
 
-          <div className="space-y-8">
-            {products.map((product, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {forgingServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl border border-slate-200/50 overflow-hidden hover:border-orange-300/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 hover:border-orange-300/50 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 hover:-translate-y-2"
+                onMouseEnter={() => setHoveredCard(index)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
                 {/* Gradient border effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-orange-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-0">
-                  {/* Product Icon */}
-                  <div className="lg:col-span-1 h-64 lg:h-auto bg-white/50 flex items-center justify-center p-8">
-                    <div className="w-24 h-24 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <svg
-                        className="w-12 h-12"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M13 10V3L4 14h7v7l9-11h-7z"
-                        />
-                      </svg>
-                    </div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
+                      />
+                    </svg>
                   </div>
-                  <div className="lg:col-span-2 p-8">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2 group-hover:text-orange-600 transition-colors duration-300">
-                      {product.name}
-                    </h3>
-                    <p className="text-orange-600 font-medium mb-4">
-                      {product.fullName}
-                    </p>
-                    <p className="text-slate-600 mb-6 leading-relaxed">
-                      {product.description}
-                    </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-sm font-semibold text-secondary-900 mb-3">
-                          Key Features:
+                  <div className="mb-4">
+                    <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-orange-600 transition-colors duration-300">
+                      {service.name}
+                    </h3>
+                    <span className="text-orange-600 font-semibold bg-orange-100 px-3 py-1 rounded-full text-sm">
+                      {service.capabilities}
+                    </span>
+                  </div>
+
+                  <p className="text-slate-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-sm font-semibold text-secondary-900 mb-2">
+                        Key Features:
+                      </h4>
+                      <ul className="space-y-1">
+                        {service.specifications.map((spec, specIndex) => (
+                          <li
+                            key={specIndex}
+                            className="flex items-start space-x-2"
+                          >
+                            <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-secondary-700 text-sm">
+                              {spec}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {hoveredCard === index && (
+                      <div className="animate-fadeIn">
+                        <h4 className="text-sm font-semibold text-secondary-900 mb-2">
+                          Technical Specs:
                         </h4>
-                        <ul className="space-y-2">
-                          {product.specifications.map((spec, specIndex) => (
-                            <li
-                              key={specIndex}
-                              className="flex items-start space-x-2"
-                            >
-                              <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-secondary-700 text-sm">
-                                {spec}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-secondary-900 mb-3">
-                          Technical Specifications:
-                        </h4>
-                        <div className="space-y-2">
-                          {Object.entries(product.technicalSpecs).map(
+                        <div className="space-y-1">
+                          {Object.entries(service.technicalSpecs).map(
                             ([key, value]) => (
                               <div key={key} className="flex justify-between">
-                                <span className="text-secondary-600 text-sm capitalize">
-                                  {key.replace(/([A-Z])/g, ' $1')}:
+                                <span className="text-secondary-600 text-xs capitalize">
+                                  {key.replace(/([A-Z])/g, ' $1').replace(/_/g, ' ')}:
                                 </span>
-                                <span className="text-secondary-900 text-sm font-medium">
+                                <span className="text-secondary-900 text-xs font-medium">
                                   {value}
                                 </span>
                               </div>
@@ -601,7 +511,7 @@ export default function CombustibleCartridgeCases() {
                           )}
                         </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
