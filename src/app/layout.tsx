@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next';
+import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: false,
-      maxVideoPreview: -1,
-      maxImagePreview: 'large',
-      maxSnippet: -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   category: 'technology',
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
+export const viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: '#0f172a',

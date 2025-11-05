@@ -26,8 +26,6 @@ const Header = () => {
     { name: 'Combustible Cartridge Cases', href: '/services/combustible-cartridge-cases' },
     { name: 'Modular Charge Systems', href: '/services/modular-charge-systems' },
     { name: 'Mechanical Fuzes', href: '/services/mechanical-fuzes' },
-    // Overview
-    { name: 'All Services', href: '/services' },
   ];
 
   const isActive = (href: string) => {

@@ -53,7 +53,7 @@ const CTASection = () => {
                 >
                   <span className="relative z-10">Schedule Consultation</span>
                 </a>
-                <a
+                {/* <a
                   href="/services"
                   className="group px-8 py-4 bg-transparent border-2 border-slate-400 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20"
                 >
@@ -71,7 +71,7 @@ const CTASection = () => {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
