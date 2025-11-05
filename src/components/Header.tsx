@@ -34,23 +34,23 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="container-custom">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4 sm:py-5">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center">
             <div className="flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Ginfra Dynamic Solutions"
-                width={96}
-                height={96}
-                className="object-contain"
+                width={80}
+                height={80}
+                className="object-contain sm:w-20 sm:h-20 lg:w-24 lg:h-24"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -134,7 +134,7 @@ const Header = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-3 -mr-1"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -165,7 +165,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-secondary-200">
+          <div className="lg:hidden py-6 px-4 sm:px-6 border-t border-secondary-200 bg-white">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
@@ -183,9 +183,9 @@ const Header = () => {
               ))}
 
               {/* Mobile Services Menu */}
-              <div className="space-y-2">
-                <span className="font-medium text-secondary-900">Services</span>
-                <div className="pl-4 space-y-2">
+              <div className="space-y-4">
+                <span className="font-medium text-secondary-900 text-lg">Services</span>
+                <div className="pl-4 space-y-3">
                   {servicesDropdown.map((item) => (
                     <Link
                       key={item.name}

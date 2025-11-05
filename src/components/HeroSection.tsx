@@ -60,7 +60,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container-custom relative z-10 flex items-center min-h-[85vh] py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex items-center min-h-[85vh] py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
           {/* Content */}
           <div
@@ -102,13 +102,13 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <Link
-                href="/services"
+              <a
+                href="#services"
                 className="group relative px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl font-semibold text-base transition-all duration-300 hover:from-blue-500 hover:to-indigo-500 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-1"
               >
                 <span className="relative z-10">Explore Capabilities</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-              </Link>
+              </a>
 
               <Link
                 href="/contact"
@@ -267,12 +267,12 @@ const HeroSection = () => {
 
                 {/* Bottom CTA */}
                 <div className="pt-4 border-t border-slate-700/50">
-                  <Link
-                    href="/services"
+                  <a
+                    href="#services"
                     className="block w-full text-center py-2.5 bg-gradient-to-r from-slate-700 to-slate-800 rounded-xl text-white font-medium hover:from-slate-600 hover:to-slate-700 transition-all duration-300 hover:shadow-lg text-sm"
                   >
                     View All Capabilities →
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

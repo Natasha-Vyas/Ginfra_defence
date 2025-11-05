@@ -8,9 +8,9 @@ const ServicesSection = () => {
 
   const services = [
     {
-      title: 'Precision CNC Machining',
+      title: 'CNC Services',
       description:
-        'Multi-axis milling and turning for tight tolerances and complex geometries.',
+        'Advanced CNC machining with 5-axis precision, tight tolerances, and comprehensive manufacturing solutions.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -22,19 +22,121 @@ const ServicesSection = () => {
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={2}
-            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+      ),
+      href: '/services/cnc-services',
+      gradient: 'from-blue-500 to-cyan-500',
+      bgGradient: 'from-blue-500/10 to-cyan-500/10',
+      features: ['5-axis machining', '±0.001" tolerance', 'Complex geometries'],
+    },
+    {
+      title: 'Electronics Services',
+      description:
+        'Advanced electronics manufacturing with SMT/THT assembly, environmental protection, and comprehensive testing.',
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+          />
+        </svg>
+      ),
+      href: '/services/electronics-services',
+      gradient: 'from-green-500 to-emerald-500',
+      bgGradient: 'from-green-500/10 to-emerald-500/10',
+      features: ['SMT/THT assembly', 'IP67/IP68 sealing', 'Full traceability'],
+    },
+    {
+      title: 'Forging Services',
+      description:
+        'High-capacity forging with heat treatment and comprehensive material testing for critical defense applications.',
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
+          />
+        </svg>
+      ),
+      href: '/services/forging-services',
+      gradient: 'from-orange-500 to-red-500',
+      bgGradient: 'from-orange-500/10 to-red-500/10',
+      features: ['5000 ton capacity', 'Heat treatment', 'Material testing'],
+    },
+    {
+      title: 'Quality Assurance',
+      description:
+        'Comprehensive quality control and testing protocols ensuring uncompromising reliability for defense applications.',
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          />
+        </svg>
+      ),
+      href: '/services/quality-assurance',
+      gradient: 'from-purple-500 to-indigo-500',
+      bgGradient: 'from-purple-500/10 to-indigo-500/10',
+      features: ['ISO 9001/AS9100', 'Environmental testing', 'Full documentation'],
+    },
+    {
+      title: 'Cartridge Cases',
+      description:
+        'Precision-manufactured cartridge cases for various calibers, designed for superior performance in defense applications.',
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 7.172V5L8 4z"
           />
         </svg>
       ),
       href: '/services/cartridge-cases',
-      gradient: 'from-blue-500 to-cyan-500',
-      bgGradient: 'from-blue-500/10 to-cyan-500/10',
-      features: ['4/5-axis capability', '±0.005 mm tolerance', 'Lot traceability'],
+      gradient: 'from-blue-600 to-indigo-600',
+      bgGradient: 'from-blue-600/10 to-indigo-600/10',
+      features: ['Multi-caliber range', 'Precision forging', 'Quality testing'],
     },
     {
-      title: 'Forging & Heat Treatment',
+      title: 'Combustible Cartridge Cases',
       description:
-        'Hot/cold forging, trimming, and metallurgical heat treatment for structural parts.',
+        'Advanced combustible cartridge cases with superior ballistic performance for specialized defense applications.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -57,44 +159,14 @@ const ServicesSection = () => {
         </svg>
       ),
       href: '/services/combustible-cartridge-cases',
-      gradient: 'from-orange-500 to-red-500',
-      bgGradient: 'from-orange-500/10 to-red-500/10',
-      features: ['Press capacity up to X t', 'Quench + temper', 'Hardness validation'],
+      gradient: 'from-red-500 to-pink-500',
+      bgGradient: 'from-red-500/10 to-pink-500/10',
+      features: ['Combustible materials', 'Ballistic performance', 'Specialized applications'],
     },
     {
-      title: 'Electronics Integration & Assembly',
+      title: 'Modular Charge Systems',
       description:
-        'SMT/THT assembly, sensor integration, harnessing, potting, and functional test.',
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      ),
-      href: '/services/mechanical-fuzes',
-      gradient: 'from-green-500 to-emerald-500',
-      bgGradient: 'from-green-500/10 to-emerald-500/10',
-      features: ['ESD-safe lines', 'AOI/ICT/functional', 'Conformal coating'],
-    },
-    {
-      title: 'Quality & Compliance',
-      description:
-        'Dimensional, environmental, and NDT testing with full documentation and traceability.',
+        'Advanced modular charge systems designed for flexibility and precision in various defense applications.',
       icon: (
         <svg
           className="w-8 h-8"
@@ -111,14 +183,38 @@ const ServicesSection = () => {
         </svg>
       ),
       href: '/services/modular-charge-systems',
-      gradient: 'from-purple-500 to-indigo-500',
-      bgGradient: 'from-purple-500/10 to-indigo-500/10',
-      features: ['ISO 9001/AS9100', 'MIL-STD/STANAG', '100% serialization'],
+      gradient: 'from-teal-500 to-cyan-500',
+      bgGradient: 'from-teal-500/10 to-cyan-500/10',
+      features: ['Modular design', 'Flexible configuration', 'Precision engineering'],
+    },
+    {
+      title: 'Mechanical Fuzes',
+      description:
+        'Precision-engineered mechanical fuzes with advanced safety systems, reliable timing mechanisms, and 99.9% activation reliability.',
+      icon: (
+        <svg
+          className="w-8 h-8"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+      href: '/services/mechanical-fuzes',
+      gradient: 'from-violet-500 to-purple-500',
+      bgGradient: 'from-violet-500/10 to-purple-500/10',
+      features: ['99.9% reliability', 'Safety systems', 'Precision timing'],
     },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -126,7 +222,7 @@ const ServicesSection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/3 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
@@ -235,10 +331,10 @@ const ServicesSection = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <Link
-            href="/services"
+            href="/contact"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 hover:-translate-y-1"
           >
-            View All Services
+            Get Started Today
             <svg
               className="ml-2 w-5 h-5"
               fill="none"

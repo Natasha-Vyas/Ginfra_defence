@@ -7,11 +7,11 @@ const CTASection = () => {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Enhanced CTA Section */}
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-20"></div>
-          <div className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-indigo-900 rounded-3xl p-12 text-white overflow-hidden">
+          <div className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-indigo-900 rounded-3xl p-4 sm:p-8 lg:p-12 text-white overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-10">
               <div

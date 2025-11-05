@@ -14,10 +14,10 @@ const Footer = () => {
         <div className="absolute top-10 left-10 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-2xl" />
       </div>
-      <div className="container-custom relative z-10 pt-16 pb-6">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto relative z-10 pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">G</span>
@@ -29,7 +29,7 @@ const Footer = () => {
                 <p className="text-secondary-300 text-sm">Defence Manufacturing</p>
               </div>
             </div>
-            <p className="text-secondary-300 mb-4 max-w-md">
+            <p className="text-secondary-300 mb-4 max-w-md text-sm sm:text-base">
               Defence-first manufacturer of precision components and munitions
               sub-systems for land, air, and naval programs.
             </p>
@@ -62,8 +62,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+          <div className="sm:col-span-1">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -93,8 +93,8 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+          <div className="sm:col-span-1">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Our Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -132,10 +132,10 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
-            <ul className="space-y-2 text-secondary-300">
-              <li className="flex items-start space-x-2">
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact Info</h4>
+            <ul className="space-y-3 text-secondary-300">
+              <li className="flex items-start space-x-3">
                 <svg
                   className="w-5 h-5 mt-0.5 flex-shrink-0"
                   fill="none"
@@ -155,12 +155,12 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <div className="text-sm">
+                <div className="text-sm leading-relaxed">
                   <div>Cherlapally, Hyderabad, Telangana</div>
                   <div className="mt-1">EMC Maheshwaram, Rangareddy, Telangana</div>
                 </div>
               </li>
-              <li className="flex items-center space-x-2">
+              <li className="flex items-center space-x-3">
                 <svg
                   className="w-5 h-5 flex-shrink-0"
                   fill="none"
@@ -180,7 +180,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-6 text-center">
+        <div className="border-t border-white/20 mt-12 pt-8 text-center">
           <p className="text-blue-100 text-sm">
             &copy; {new Date().getFullYear()} Ginfra Dynamic Pvt. Ltd. All rights
             reserved.
