@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 const CapabilitiesOverview = () => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   const capabilities = [
     {
       icon: (
@@ -19,6 +25,8 @@ const CapabilitiesOverview = () => {
       title: 'Forging & Pressing',
       description:
         'Hot/cold forging for structural casings and load-bearing parts with precision metallurgy',
+      gradient: 'from-orange-500 to-red-500',
+      bgGradient: 'from-orange-500/10 to-red-500/10',
     },
     {
       icon: (
@@ -45,6 +53,8 @@ const CapabilitiesOverview = () => {
       title: 'Multi-axis CNC Machining',
       description:
         'Precision turning/milling for tight tolerances and complex geometries',
+      gradient: 'from-blue-500 to-cyan-500',
+      bgGradient: 'from-blue-500/10 to-cyan-500/10',
     },
     {
       icon: (
@@ -65,6 +75,8 @@ const CapabilitiesOverview = () => {
       title: 'Electronics Integration',
       description:
         'PCB assembly, wiring harnesses, sensors and potting for electronic systems',
+      gradient: 'from-green-500 to-emerald-500',
+      bgGradient: 'from-green-500/10 to-emerald-500/10',
     },
     {
       icon: (
@@ -85,6 +97,8 @@ const CapabilitiesOverview = () => {
       title: 'Controlled Assembly',
       description:
         'Clean room environment for electronic fuzes and electromechanical subsystems',
+      gradient: 'from-purple-500 to-indigo-500',
+      bgGradient: 'from-purple-500/10 to-indigo-500/10',
     },
     {
       icon: (
@@ -105,6 +119,8 @@ const CapabilitiesOverview = () => {
       title: 'Comprehensive Testing',
       description:
         'Functional, environmental, electrical, metrology, and NDE testing protocols',
+      gradient: 'from-teal-500 to-cyan-500',
+      bgGradient: 'from-teal-500/10 to-cyan-500/10',
     },
     {
       icon: (
@@ -125,6 +141,8 @@ const CapabilitiesOverview = () => {
       title: 'Traceability & QA',
       description:
         'Complete lot control and defence compliance systems for full accountability',
+      gradient: 'from-pink-500 to-rose-500',
+      bgGradient: 'from-pink-500/10 to-rose-500/10',
     },
   ];
 
@@ -138,27 +156,25 @@ const CapabilitiesOverview = () => {
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <span className="text-blue-600 font-medium">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+            <span className="text-sm font-medium text-blue-700">
               Manufacturing Excellence
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
               Core Manufacturing
             </span>
             <br />
-            <span className="text-slate-700">Capabilities</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            End-to-end capability from{' '}
-            <span className="text-blue-600 font-semibold">metallurgy</span> to
-            <span className="text-indigo-600 font-semibold">
-              {' '}
-              precision machining
+            <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+              Capabilities
             </span>
-            , electronics integration, assembly, and comprehensive testing for
-            mission-critical applications.
+          </h2>
+
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            End-to-end capability from metallurgy to precision machining, electronics integration, assembly, and comprehensive testing for mission-critical applications.
           </p>
         </div>
 
@@ -166,115 +182,45 @@ const CapabilitiesOverview = () => {
           {capabilities.map((capability, index) => (
             <div
               key={index}
-              className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+              className="group block"
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Gradient border effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div
+                className={`relative h-full bg-white rounded-2xl p-6 border border-slate-200/50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${
+                  hoveredCard === index ? 'scale-105' : ''
+                }`}
+              >
+                {/* Gradient Background */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${capability.bgGradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                ></div>
 
-              <div className="relative z-10">
-                <div className="flex items-start space-x-4 mb-4">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                {/* Glowing Border Effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-r ${capability.gradient} rounded-2xl opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500`}
+                ></div>
+
+                <div className="relative z-10">
+                  {/* Icon */}
+                  <div
+                    className={`w-16 h-16 bg-gradient-to-r ${capability.gradient} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
                     {capability.icon}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                      {capability.title}
-                    </h3>
-                  </div>
-                </div>
-                <p className="text-slate-600 leading-relaxed">
-                  {capability.description}
-                </p>
 
-                {/* Hover indicator */}
-                <div className="mt-6 flex items-center text-blue-600 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <span className="text-sm font-medium">Learn more</span>
-                  <svg
-                    className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors duration-300">
+                    {capability.title}
+                  </h3>
+
+                  <p className="text-slate-600 text-sm leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+                    {capability.description}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Enhanced CTA Section */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-20"></div>
-          <div className="relative bg-gradient-to-r from-slate-800 via-blue-900 to-indigo-900 rounded-3xl p-12 text-white overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div
-                className="absolute inset-0"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                }}
-              />
-            </div>
-
-            <div className="relative z-10 text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></div>
-                <span className="text-sm font-medium">Ready to Start</span>
-              </div>
-
-              <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                Ready to discuss your
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                  {' '}
-                  manufacturing requirements
-                </span>
-                ?
-              </h3>
-
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Our technical team is ready to provide detailed specifications
-                and discuss{' '}
-                <span className="text-cyan-400 font-semibold">
-                  Transfer of Technology
-                </span>{' '}
-                opportunities for your specific applications.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <a
-                  href="/contact"
-                  className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl font-semibold text-lg transition-all duration-300 hover:from-cyan-400 hover:to-blue-400 hover:shadow-2xl hover:shadow-cyan-500/25 hover:-translate-y-1"
-                >
-                  <span className="relative z-10">Schedule Consultation</span>
-                </a>
-                <a
-                  href="/services"
-                  className="group px-8 py-4 bg-transparent border-2 border-slate-400 rounded-xl font-semibold text-lg transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/20"
-                >
-                  View All Services
-                  <svg
-                    className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

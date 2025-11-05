@@ -122,19 +122,11 @@ export default function About() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About Ginfra Dynamic
             </h1>
-            <p className="text-xl text-secondary-200 mb-8">
+            <p className="text-xl text-secondary-200">
               Building an intelligent, modular production system to manufacture
               high-precision fuzes, detonators and related subsystems — scalable
               to support aerospace and robotics components.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/services" className="btn-primary">
-                Our Services
-              </Link>
-              <Link href="/contact" className="btn-secondary">
-                Get in Touch
-              </Link>
-            </div>
           </div>
         </div>
       </section>
@@ -439,6 +431,55 @@ export default function About() {
               <p className="text-secondary-300 text-sm">
                 ISO 9001, AS9100, defence certifications
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Turnkey Expansion */}
+      <section className="bg-secondary-50 section-padding">
+        <div className="container-custom">
+          <div className="bg-gradient-to-r from-primary-600 to-secondary-700 rounded-2xl p-8 text-white">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4">
+                Future Turnkey Expansion
+              </h3>
+              <p className="text-primary-100 max-w-2xl mx-auto">
+                Strategic expansion into complete propellant production
+                capabilities
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h4 className="text-lg font-semibold mb-3">
+                  Nitrocellulose Production
+                </h4>
+                <p className="text-primary-100 text-sm mb-3">
+                  High-grade nitrocellulose production (10.8%–13.4% N) for
+                  propellant manufacturing
+                </p>
+                <ul className="text-primary-200 text-sm space-y-1">
+                  <li>• Controlled nitrogen content</li>
+                  <li>• Quality assurance protocols</li>
+                  <li>• Environmental compliance</li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <h4 className="text-lg font-semibold mb-3">
+                  Propellant Production Lines
+                </h4>
+                <p className="text-primary-100 text-sm mb-3">
+                  Complete single, double, and triple base propellant
+                  manufacturing
+                </p>
+                <ul className="text-primary-200 text-sm space-y-1">
+                  <li>• Single base propellants</li>
+                  <li>• Double base formulations</li>
+                  <li>• Triple base advanced systems</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

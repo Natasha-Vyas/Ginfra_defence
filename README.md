@@ -1,6 +1,6 @@
-# GInfra Travancore Pvt. Ltd. Website
+# Ginfra Dynamic Solutions Pvt. Ltd. Website
 
-A modern, professional Next.js website for GInfra Travancore Pvt. Ltd., showcasing precision manufacturing capabilities for Defence, Aerospace, and Advanced Robotics applications.
+A modern, professional Next.js website for Ginfra Dynamic Solutions Pvt. Ltd., showcasing precision manufacturing capabilities for Defence, Aerospace, and Advanced Robotics applications.
 
 ## Features
 
@@ -181,5 +181,5 @@ For technical support or customization requests, please contact the development 
 
 ---
 
-**GInfra Travancore Pvt. Ltd.**  
+**Ginfra Dynamic Solutions Pvt. Ltd.**  
 Precision Manufacturing for Defence • Aerospace • Advanced Robotics

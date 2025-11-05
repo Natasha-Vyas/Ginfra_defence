@@ -7,7 +7,6 @@ export default function Contact() {
     name: '',
     email: '',
     company: '',
-    phone: '',
     subject: '',
     message: '',
     inquiryType: 'general',
@@ -43,7 +42,6 @@ export default function Contact() {
           name: formData.name,
           email: formData.email,
           company: formData.company,
-          phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
           inquiryType: formData.inquiryType,
@@ -59,7 +57,6 @@ export default function Contact() {
         name: '',
         email: '',
         company: '',
-        phone: '',
         subject: '',
         message: '',
         inquiryType: 'general',
@@ -94,8 +91,8 @@ export default function Contact() {
           />
         </svg>
       ),
-      title: 'Address',
-      details: ['Travancore, Kerala, India', 'Manufacturing Facility'],
+      title: 'Locations',
+      details: ['Cherlapally, Hyderabad, Telangana', 'EMC Maheshwaram, Rangareddy, Telangana'],
     },
     {
       icon: (
@@ -114,26 +111,7 @@ export default function Contact() {
         </svg>
       ),
       title: 'Email',
-      details: ['info@ginfratravancore.com', 'business@ginfratravancore.com'],
-    },
-    {
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-          />
-        </svg>
-      ),
-      title: 'Phone',
-      details: ['+91 XXX XXX XXXX', 'Business Hours: 9 AM - 6 PM IST'],
+      details: ['info@ginfratravancore.com'],
     },
   ];
 
@@ -288,41 +266,22 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="company"
-                        className="block text-sm font-medium text-secondary-700 mb-2"
-                      >
-                        Company/Organization
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                        placeholder="Your company name"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-medium text-secondary-700 mb-2"
-                      >
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
-                        placeholder="+91 XXX XXX XXXX"
-                      />
-                    </div>
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-secondary-700 mb-2"
+                    >
+                      Company/Organization
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors"
+                      placeholder="Your company name"
+                    />
                   </div>
 
                   <div>

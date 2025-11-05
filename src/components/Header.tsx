@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,13 +33,14 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">G</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-secondary-900">
-                Ginfra Dynamic
-              </h1>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/logo.png"
+                alt="Ginfra Dynamic Solutions"
+                width={96}
+                height={96}
+                className="object-contain"
+              />
             </div>
           </Link>
 

@@ -84,13 +84,33 @@ const ProductionRoadmap = () => {
   };
 
   return (
-    <section className="bg-secondary-50 section-padding">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            Staged Production Roadmap
+    <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 right-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div className="container-custom relative z-10">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+            <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+            <span className="text-sm font-medium text-blue-700">
+              Production Roadmap
+            </span>
+          </div>
+
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+              Staged Production
+            </span>
+            <br />
+            <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+              Roadmap
+            </span>
           </h2>
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Our modular, stage-wise approach minimizes risk and enables targeted
             Transfer of Technology (ToT) per stage, ensuring rapid qualification
             and high-volume supply capabilities.
@@ -101,116 +121,76 @@ const ProductionRoadmap = () => {
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm border border-secondary-200 hover:shadow-md transition-shadow duration-300"
+              className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-primary-600 text-white rounded-lg flex items-center justify-center font-semibold text-sm">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary-900">
-                      {stage.title}
-                    </h3>
-                    <p className="text-sm text-secondary-600">{stage.stage}</p>
-                  </div>
-                </div>
-                <span
-                  className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(
-                    stage.status
-                  )}`}
-                >
-                  {stage.status}
-                </span>
-              </div>
+              {/* Gradient border effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-              <p className="text-secondary-700 mb-4">{stage.description}</p>
-
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2">
-                  <svg
-                    className="w-4 h-4 text-primary-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+              <div className="relative z-10">
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-2xl flex items-center justify-center font-bold text-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                      {index + 1}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                        {stage.title}
+                      </h3>
+                      <p className="text-sm text-slate-500 font-medium">{stage.stage}</p>
+                    </div>
+                  </div>
+                  <span
+                    className={`px-3 py-1.5 rounded-full text-xs font-semibold border ${getStatusColor(
+                      stage.status
+                    )}`}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  <span className="text-sm text-secondary-600">
-                    Timeline: {stage.timeline}
+                    {stage.status}
                   </span>
                 </div>
 
-                <div className="space-y-2">
-                  <h4 className="text-sm font-medium text-secondary-900">
-                    Key Features:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {stage.features.map((feature, featureIndex) => (
-                      <span
-                        key={featureIndex}
-                        className="px-2 py-1 bg-primary-50 text-primary-700 rounded text-xs"
+                <p className="text-slate-600 leading-relaxed mb-6">{stage.description}</p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-blue-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        {feature}
-                      </span>
-                    ))}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-sm text-slate-600 font-medium">
+                      Timeline: {stage.timeline}
+                    </span>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="text-sm font-semibold text-slate-800">
+                      Key Features:
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {stage.features.map((feature, featureIndex) => (
+                        <span
+                          key={featureIndex}
+                          className="px-3 py-1.5 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-lg text-xs font-medium border border-blue-200/50"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Future Expansion */}
-        <div className="mt-16">
-          <div className="bg-gradient-to-r from-primary-600 to-secondary-700 rounded-2xl p-8 text-white">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Future Turnkey Expansion
-              </h3>
-              <p className="text-primary-100 max-w-2xl mx-auto">
-                Strategic expansion into complete propellant production
-                capabilities
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3">
-                  Nitrocellulose Production
-                </h4>
-                <p className="text-primary-100 text-sm mb-3">
-                  High-grade nitrocellulose production (10.8%–13.4% N) for
-                  propellant manufacturing
-                </p>
-                <ul className="text-primary-200 text-sm space-y-1">
-                  <li>• Controlled nitrogen content</li>
-                  <li>• Quality assurance protocols</li>
-                  <li>• Environmental compliance</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3">
-                  Propellant Production Lines
-                </h4>
-                <p className="text-primary-100 text-sm mb-3">
-                  Complete single, double, and triple base propellant
-                  manufacturing
-                </p>
-                <ul className="text-primary-200 text-sm space-y-1">
-                  <li>• Single base propellants</li>
-                  <li>• Double base formulations</li>
-                  <li>• Triple base advanced systems</li>
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
