@@ -35,16 +35,16 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4 sm:py-5">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="flex items-center justify-center">
               <Image
                 src="/logo.png"
                 alt="Ginfra Dynamic Solutions"
-                width={80}
-                height={80}
-                className="object-contain sm:w-20 sm:h-20 lg:w-24 lg:h-24"
+                width={100}
+                height={100}
+                className="object-contain sm:w-24 sm:h-24 lg:w-32 lg:h-32"
               />
             </div>
           </Link>
