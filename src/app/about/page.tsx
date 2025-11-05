@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CTASection from '@/components/CTASection';
 
 export default function About() {
   const processFlow = [
@@ -116,11 +117,61 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-secondary-900 to-primary-900 text-white section-padding">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-secondary-900 to-primary-900 text-white section-padding overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Geometric shapes */}
+          <div className="absolute top-20 left-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-20 h-20 bg-indigo-500/10 rounded-full blur-lg animate-bounce"></div>
+          <div className="absolute bottom-24 left-1/4 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl animate-pulse"></div>
+          <div
+            className="absolute top-1/2 right-1/3 w-16 h-16 bg-purple-500/10 rounded-full blur-lg animate-pulse"
+            style={{ animationDelay: '2s' }}
+          ></div>
+
+          {/* Grid pattern */}
+          <div
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 0h100v100H0z'/%3E%3Cpath d='M0 50h100M50 0v100'/%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+
+          {/* Floating particles */}
+          <div className="absolute inset-0">
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[10%] left-[15%]"
+              style={{ animationDelay: '0s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[25%] left-[80%]"
+              style={{ animationDelay: '1s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[40%] left-[25%]"
+              style={{ animationDelay: '2s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[60%] left-[70%]"
+              style={{ animationDelay: '0.5s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[75%] left-[40%]"
+              style={{ animationDelay: '1.5s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[85%] left-[85%]"
+              style={{ animationDelay: '2.5s' }}
+            ></div>
+          </div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About Ginfra Dynamic
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
+                About Ginfra Dynamic
+              </span>
             </h1>
             <p className="text-xl text-secondary-200">
               Building an intelligent, modular production system to manufacture
@@ -132,12 +183,26 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Our Mission & Vision
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-sm font-medium text-blue-700">
+                  Company Overview
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+                <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                  Our Mission & Vision
+                </span>
               </h2>
               <div className="space-y-6">
                 <div>
@@ -257,36 +322,62 @@ export default function About() {
       </section>
 
       {/* Process Flow */}
-      <section className="bg-secondary-50 section-padding">
-        <div className="container-custom">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              High-Level Process Flow
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-700">
+                Manufacturing Process
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                High-Level Process
+              </span>
+              <br />
+              <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+                Flow
+              </span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Our comprehensive manufacturing process for Electronic
               Point-Detonating Fuze production, ensuring precision and quality
               at every stage.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {processFlow.map((process, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 shadow-sm border border-secondary-200 hover:shadow-md transition-shadow duration-300"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-primary-600 text-white rounded-lg flex items-center justify-center font-bold flex-shrink-0">
-                    {process.step}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-secondary-900 mb-2">
-                      {process.title}
-                    </h3>
-                    <p className="text-secondary-600 text-sm leading-relaxed">
-                      {process.description}
-                    </p>
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 text-white rounded-xl flex items-center justify-center font-bold text-lg group-hover:scale-110 transition-transform duration-300 shadow-lg flex-shrink-0">
+                      {process.step}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+                        {process.title}
+                      </h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">
+                        {process.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -296,13 +387,33 @@ export default function About() {
       </section>
 
       {/* Equipment & Technology */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Equipment & Technology
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-700">
+                Technology Infrastructure
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                Equipment &
+              </span>
+              <br />
+              <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+                Technology
+              </span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               State-of-the-art equipment and technology infrastructure designed
               for precision manufacturing and quality assurance.
             </p>
@@ -312,178 +423,33 @@ export default function About() {
             {equipmentCategories.map((category, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-6 border border-primary-100"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
               >
-                <h3 className="text-lg font-semibold text-secondary-900 mb-4">
-                  {category.category}
-                </h3>
-                <ul className="space-y-2">
-                  {category.equipment.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-secondary-700 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10">
+                  <h3 className="text-lg font-bold text-slate-800 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                    {category.category}
+                  </h3>
+                  <ul className="space-y-3">
+                    {category.equipment.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start space-x-3">
+                        <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-slate-600 text-sm leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Quality & Compliance */}
-      <section className="bg-secondary-900 text-white section-padding">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Quality Assurance & Compliance
-            </h2>
-            <p className="text-xl text-secondary-200 max-w-3xl mx-auto">
-              Comprehensive quality systems and compliance protocols ensuring
-              the highest standards for defence and aerospace applications.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Documentation</h3>
-              <p className="text-secondary-300 text-sm">
-                Work instructions, inspection plans, batch records
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Process Control</h3>
-              <p className="text-secondary-300 text-sm">
-                Statistical process control, SPC charts
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Testing Protocols</h3>
-              <p className="text-secondary-300 text-sm">
-                EVT, ESS, functional acceptance tests
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Certifications</h3>
-              <p className="text-secondary-300 text-sm">
-                ISO 9001, AS9100, defence certifications
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Future Turnkey Expansion */}
-      <section className="bg-secondary-50 section-padding">
-        <div className="container-custom">
-          <div className="bg-gradient-to-r from-primary-600 to-secondary-700 rounded-2xl p-8 text-white">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">
-                Future Turnkey Expansion
-              </h3>
-              <p className="text-primary-100 max-w-2xl mx-auto">
-                Strategic expansion into complete propellant production
-                capabilities
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3">
-                  Nitrocellulose Production
-                </h4>
-                <p className="text-primary-100 text-sm mb-3">
-                  High-grade nitrocellulose production (10.8%–13.4% N) for
-                  propellant manufacturing
-                </p>
-                <ul className="text-primary-200 text-sm space-y-1">
-                  <li>• Controlled nitrogen content</li>
-                  <li>• Quality assurance protocols</li>
-                  <li>• Environmental compliance</li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                <h4 className="text-lg font-semibold mb-3">
-                  Propellant Production Lines
-                </h4>
-                <p className="text-primary-100 text-sm mb-3">
-                  Complete single, double, and triple base propellant
-                  manufacturing
-                </p>
-                <ul className="text-primary-200 text-sm space-y-1">
-                  <li>• Single base propellants</li>
-                  <li>• Double base formulations</li>
-                  <li>• Triple base advanced systems</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* CTA Section */}
+      <CTASection />
     </div>
   );
 }

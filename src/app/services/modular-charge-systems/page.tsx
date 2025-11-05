@@ -1,6 +1,11 @@
-﻿import Link from 'next/link';
+﻿'use client';
+
+import Link from 'next/link';
+import CTASection from '@/components/CTASection';
+import { useState } from 'react';
 
 export default function ModularChargeSystems() {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const products = [
     {
       name: 'Dimensional Validation',
@@ -147,61 +152,124 @@ export default function ModularChargeSystems() {
 
   return (
     <div className="min-h-screen">
-      {/* Banner Section */}
-      <section className="relative h-96 bg-gradient-to-r from-secondary-800 via-primary-900 to-secondary-900 overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-secondary-900 to-primary-900 text-white section-padding overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Geometric shapes */}
+          <div className="absolute top-20 left-10 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-32 right-20 w-20 h-20 bg-indigo-500/10 rounded-full blur-lg animate-bounce"></div>
+          <div className="absolute bottom-24 left-1/4 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl animate-pulse"></div>
           <div
-            className="absolute inset-0"
+            className="absolute top-1/2 right-1/3 w-16 h-16 bg-purple-500/10 rounded-full blur-lg animate-pulse"
+            style={{ animationDelay: '2s' }}
+          ></div>
+
+          {/* Grid pattern */}
+          <div
+            className="absolute inset-0 opacity-5"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Cpath d='M0 0h100v100H0z'/%3E%3Cpath d='M0 50h100M50 0v100'/%3E%3C/g%3E%3C/svg%3E")`,
             }}
           />
+
+          {/* Floating particles */}
+          <div className="absolute inset-0">
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[10%] left-[15%]"
+              style={{ animationDelay: '0s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[25%] left-[80%]"
+              style={{ animationDelay: '1s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[40%] left-[25%]"
+              style={{ animationDelay: '2s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[60%] left-[70%]"
+              style={{ animationDelay: '0.5s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[75%] left-[40%]"
+              style={{ animationDelay: '1.5s' }}
+            ></div>
+            <div
+              className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse top-[85%] left-[85%]"
+              style={{ animationDelay: '2.5s' }}
+            ></div>
+          </div>
         </div>
 
-        <div className="relative z-10 container-custom h-full flex items-center">
-          <div className="text-white">
-            <nav className="text-sm mb-4">
-              <Link href="/" className="text-primary-300 hover:text-white">
+        <div className="container-custom relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <nav className="text-sm mb-6">
+              <Link href="/" className="text-primary-300 hover:text-white transition-colors">
                 Home
               </Link>
-              <span className="mx-2">/</span>
+              <span className="mx-2 text-primary-300">/</span>
               <Link
                 href="/services"
-                className="text-primary-300 hover:text-white"
+                className="text-primary-300 hover:text-white transition-colors"
               >
                 Services
               </Link>
-              <span className="mx-2">/</span>
-              <span className="text-white">Quality & Compliance</span>
+              <span className="mx-2 text-primary-300">/</span>
+              <span className="text-white">Modular Charge Systems</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Quality & Compliance
+            
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-200">
+                Modular Charge Systems
+              </span>
+            </div>
+            
+            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6">
+              <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text text-transparent">
+                Modular Charge Systems
+              </span>
             </h1>
-            <p className="text-xl text-secondary-200 max-w-2xl">
-              Dimensional, environmental, and NDT testing with documentation,
-              serialization, and standards compliance for defence programs.
+            <p className="text-xl text-secondary-200">
+              Advanced 155mm bi-modular charge systems with variable range control,
+              NATO compatibility, and superior ballistic performance.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Content Section with Right/Left Layout */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
+      {/* Content Section with Left/Right Layout */}
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-200/20 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left Content */}
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Quality & Compliance Capabilities
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-sm font-medium text-blue-700">
+                  System Capabilities
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                  Modular Charge System Capabilities
+                </span>
               </h2>
               <p className="text-secondary-700 mb-6 leading-relaxed">
-                We implement defence-grade QA frameworks including FAI/PPAP,
-                dimensional validation, environmental testing, NDT, and
-                full-chain traceability to MIL/NATO and ISO/AS standards.
+                Advanced 155mm bi-modular charge systems delivering variable range
+                control, superior ballistics, and NATO compatibility for modern
+                artillery operations.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -221,7 +289,7 @@ export default function ModularChargeSystems() {
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -241,7 +309,7 @@ export default function ModularChargeSystems() {
                   </p>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
                       className="w-3 h-3 text-white"
                       fill="none"
@@ -264,9 +332,9 @@ export default function ModularChargeSystems() {
             </div>
 
             {/* Right Image Placeholder */}
-            <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 h-80 flex items-center justify-center border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
               <div className="text-center">
-                <div className="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg
                     className="w-12 h-12 text-white"
                     fill="none"
@@ -289,15 +357,36 @@ export default function ModularChargeSystems() {
       </section>
 
       {/* Advantages Section */}
-      <section className="bg-secondary-50 section-padding">
-        <div className="container-custom">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              System Advantages
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-700">
+                System Advantages
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                System
+              </span>
+              <br />
+              <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+                Advantages
+              </span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Key benefits of our modular charge systems for modern artillery
-              operations
+              operations and tactical flexibility.
             </p>
           </div>
 
@@ -305,17 +394,22 @@ export default function ModularChargeSystems() {
             {advantages.map((advantage, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 text-center shadow-sm border border-secondary-200 hover:shadow-md transition-shadow duration-300"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl p-6 text-center border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="w-16 h-16 bg-primary-600 text-white rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  {advantage.icon}
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                    {advantage.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-slate-800 mb-3 group-hover:text-green-600 transition-colors duration-300">
+                    {advantage.title}
+                  </h3>
+                  <p className="text-slate-600 text-sm leading-relaxed">
+                    {advantage.description}
+                  </p>
                 </div>
-                <h3 className="text-lg font-semibold text-secondary-900 mb-3">
-                  {advantage.title}
-                </h3>
-                <p className="text-secondary-600 text-sm leading-relaxed">
-                  {advantage.description}
-                </p>
               </div>
             ))}
           </div>
@@ -323,15 +417,36 @@ export default function ModularChargeSystems() {
       </section>
 
       {/* Products Section */}
-      <section className="bg-white section-padding">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 section-padding overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              BMCS Product Range
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-700">
+                Product Range
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                BMCS Product
+              </span>
+              <br />
+              <span className="text-slate-700 text-2xl md:text-3xl lg:text-4xl font-medium">
+                Range
+              </span>
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Advanced 155mm bi-modular charge systems for diverse artillery
-              applications
+              applications and tactical requirements.
             </p>
           </div>
 
@@ -339,26 +454,38 @@ export default function ModularChargeSystems() {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-primary-50 to-secondary-50 rounded-2xl border border-primary-200 overflow-hidden"
+                className="group relative bg-white/70 backdrop-blur-sm rounded-2xl border border-slate-200/50 overflow-hidden hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-0">
-                  {/* Product Image */}
-                  <div className="lg:col-span-1 h-64 lg:h-auto">
-                    <img
-                      src={bmcsImageMap[product.name] ?? '/images/services/qa/environmental.svg'}
-                      alt={product.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                {/* Gradient border effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-green-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-0">
+                  {/* Product Icon */}
+                  <div className="lg:col-span-1 h-64 lg:h-auto bg-white/50 flex items-center justify-center p-8">
+                    <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <svg
+                        className="w-12 h-12"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        />
+                      </svg>
+                    </div>
                   </div>
                   <div className="lg:col-span-2 p-8">
-                    <h3 className="text-2xl font-bold text-secondary-900 mb-2">
+                    <h3 className="text-2xl font-bold text-slate-800 mb-2 group-hover:text-green-600 transition-colors duration-300">
                       {product.name}
                     </h3>
-                    <p className="text-primary-600 font-medium mb-4">
+                    <p className="text-green-600 font-medium mb-4">
                       {product.fullName}
                     </p>
-                    <p className="text-secondary-700 mb-6 leading-relaxed">
+                    <p className="text-slate-600 mb-6 leading-relaxed">
                       {product.description}
                     </p>
 
@@ -373,7 +500,7 @@ export default function ModularChargeSystems() {
                               key={specIndex}
                               className="flex items-start space-x-2"
                             >
-                              <div className="w-1.5 h-1.5 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                              <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
                               <span className="text-secondary-700 text-sm">
                                 {spec}
                               </span>
@@ -410,12 +537,27 @@ export default function ModularChargeSystems() {
       </section>
 
       {/* Applications Section */}
-      <section className="bg-secondary-50 section-padding">
-        <div className="container-custom">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-indigo-500/3 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-                Artillery Applications
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 backdrop-blur-sm rounded-full border border-blue-200/50 mb-6">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 animate-pulse"></div>
+                <span className="text-sm font-medium text-blue-700">
+                  Applications
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                <span className="bg-gradient-to-r from-slate-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent">
+                  Artillery Applications
+                </span>
               </h2>
               <p className="text-secondary-700 mb-8 leading-relaxed">
                 Our modular charge systems are compatible with a wide range of
@@ -425,16 +567,16 @@ export default function ModularChargeSystems() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {applications.map((application, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full flex-shrink-0"></div>
+                    <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex-shrink-0"></div>
                     <span className="text-secondary-700">{application}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-primary-100 to-secondary-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 h-80 flex items-center justify-center border border-slate-200/50 hover:border-blue-300/50 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500">
               <div className="text-center">
-                <div className="w-24 h-24 bg-secondary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <svg
                     className="w-12 h-12 text-white"
                     fill="none"
@@ -459,31 +601,7 @@ export default function ModularChargeSystems() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-primary-600 to-secondary-700 text-white section-padding">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Advanced Artillery Solutions
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Enhance your artillery capabilities with our cutting-edge modular
-            charge systems and comprehensive technical support.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="bg-white text-secondary-900 font-semibold py-3 px-8 rounded-lg hover:bg-secondary-100 transition-colors duration-200"
-            >
-              Contact Artillery Specialists
-            </Link>
-            <Link
-              href="/services"
-              className="border border-white/30 text-white font-semibold py-3 px-8 rounded-lg hover:bg-white/10 transition-colors duration-200"
-            >
-              View All Systems
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </div>
   );
 }

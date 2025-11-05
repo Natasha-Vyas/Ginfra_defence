@@ -14,8 +14,8 @@ const Footer = () => {
         <div className="absolute top-10 left-10 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl" />
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-indigo-500/20 rounded-full blur-2xl" />
       </div>
-      <div className="container-custom section-padding relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container-custom relative z-10 pt-16 pb-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
@@ -83,18 +83,49 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
-                  className="text-secondary-300 hover:text-white transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="text-secondary-300 hover:text-white transition-colors"
                 >
                   Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/services/cartridge-cases"
+                  className="text-secondary-300 hover:text-white transition-colors text-sm"
+                >
+                  Cartridge Cases
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/combustible-cartridge-cases"
+                  className="text-secondary-300 hover:text-white transition-colors text-sm"
+                >
+                  Combustible Cartridge Cases
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/mechanical-fuzes"
+                  className="text-secondary-300 hover:text-white transition-colors text-sm"
+                >
+                  Mechanical Fuzes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/modular-charge-systems"
+                  className="text-secondary-300 hover:text-white transition-colors text-sm"
+                >
+                  Modular Charge Systems
                 </Link>
               </li>
             </ul>
@@ -124,7 +155,10 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-sm">Cherlapally, Hyderabad, Telangana</span>
+                <div className="text-sm">
+                  <div>Cherlapally, Hyderabad, Telangana</div>
+                  <div className="mt-1">EMC Maheshwaram, Rangareddy, Telangana</div>
+                </div>
               </li>
               <li className="flex items-center space-x-2">
                 <svg
@@ -146,7 +180,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
+        <div className="border-t border-white/20 mt-8 pt-6 text-center">
           <p className="text-blue-100 text-sm">
             &copy; {new Date().getFullYear()} Ginfra Dynamic Pvt. Ltd. All rights
             reserved.
